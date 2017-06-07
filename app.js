@@ -22,6 +22,19 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+/*===========================================================
+=            mongoose connection with the server            =
+===========================================================*/
+var mongoose = require("mongoose");
+
+mongoose.connect("mongodb://localhost:27017/leaseApp",function(){
+	console.log("mongoose successfully connected to mongodb");
+});
+
+
+/*=====  End of mongoose connection with the server  ======*/
+
 app.use('/', index);
 app.use('/users', users);
 
