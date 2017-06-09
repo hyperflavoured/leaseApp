@@ -9,8 +9,12 @@ var mongoose = require("mongoose");
 //var auth = require("../middlewares/auth.js")();
 //var rimraf = require('rimraf');
 
+//var areaInfoModel = require("../../models/areaInfoModel");
+router.post("/add/area_info",function(request, response, next){
 
-if(request.body){
+	console.log("requested to /add/area_info/");
+
+	if(request.body){
 		var newLEASE = new areaInfoModel(request.body.areaInfo);
 		var error = newHE.validateSync();
 		if(error){
@@ -28,8 +32,8 @@ if(request.body){
 		console.log("request.body not found");
 		response.status(500).json({"message":"invalid request"});
 	}
+});
 /* GET users listing. */
 //  res.send({type:'POST'});
-);
 
 module.exports = router;
