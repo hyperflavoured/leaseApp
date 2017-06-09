@@ -12,7 +12,7 @@ html(lang='en',ng-app='App')
     // Mobile Metas
     meta(name='viewport', content='width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no')
     // Web Fonts
-    link(href='https://fonts.googleapis.com/css?family=Oswald:300,400,600,700,800%7CShadows+Into+Light', rel='stylesheet', type='text/css')
+    //link(href='https://fonts.googleapis.com/css?family=Oswald:300,400,600,700,800%7CShadows+Into+Light', rel='stylesheet', type='text/css')
     // Vendor CSS
     link(rel='stylesheet', href='stylesheets/vendor/bootstrap/css/bootstrap.min.css')
     link(rel='stylesheet', href='stylesheets/vendor/font-awesome/css/font-awesome.min.css')
@@ -58,11 +58,11 @@ html(lang='en',ng-app='App')
                   nav.header-nav-top
                     ul.nav.nav-pills
                       li.hidden-xs
-                        a(href='about-us.html')
+                        a(href='#/about_us')
                           i.fa.fa-angle-right
                           |  About Us
                       li.hidden-xs
-                        a(href='contact-us.html')
+                        a(href='#/contact_us')
                           i.fa.fa-angle-right
                           |  Contact Us
                 .header-row
@@ -73,20 +73,19 @@ html(lang='en',ng-app='App')
                       nav
                         ul#mainNav.nav.nav-pills
                           li
-                            a.toggle(href='/home')
+                            a.toggle(href='#/home')
                               | Home
                           li
-                            a.toggle(href='/home')
+                            a.toggle(href='#/e_tender')
                               | E-tender
                           li
-                            a.toggle(href='/home')
+                            a.toggle(href='#/lease')
                               | Lease
                           li
-                            a.toggle(href='/home')
+                            a.toggle(href='#/find_land')
                               | Find Land
                           li#headerAccount.dropdown.dropdown-mega.dropdown-mega-signin.signin
-                            a.dropdown-toggle(href='page-login.html')
-                              i.fa.fa-user
+                            a.dropdown-toggle(href='#')
                               |  Sign In
                             ul.dropdown-menu
                               li
@@ -158,15 +157,21 @@ html(lang='en',ng-app='App')
                                           a#headerRecoverCancel.p-none.m-none.ml-xs(href='#') Log In
       
     .container
-      br
-      br
-      br
       block content
     // /.container
     // jQuery (necessary for Bootstrap's JavaScript plugins)
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+    script(src='stylesheets/vendor/jquery/jquery.min.js')
+    // Theme Base, Components and Settings
+    script(src='stylesheets/js/theme.js')
+    // Current Page Vendor and Views
+    script(src='stylesheets/vendor/rs-plugin/js/jquery.themepunch.tools.min.js')
+    script(src='stylesheets/vendor/rs-plugin/js/jquery.themepunch.revolution.min.js')
+    // Theme Custom
+    script(src='stylesheets/js/custom.js')
+    // Theme Initialization Files
+    script(src='stylesheets/js/theme.init.js')
+    //
     // Include all compiled plugins (below), or include individual files as needed
-    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')
     // Bower Component Additions
     script(src='bower_components/angular/angular.js')
     script(src='bower_components/angular-route/angular-route.js')
