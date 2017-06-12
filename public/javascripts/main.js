@@ -121,6 +121,19 @@
 				}]
 			}
         })
+
+        .when('/register', {
+			templateUrl: serverRequestAddr.devServerAdd + '/register', // sends request to server for html page
+			controller: 'registerCtrl',
+			resolve: {
+				loadAsset: ['$ocLazyLoad', function($ocLazyLoad) {
+					return $ocLazyLoad.load({
+						files : [
+						serverRequestAddr.devServerAdd + '/javascripts/controllers/contactUsCtrl.js',
+						]})
+				}]
+			}
+        })
 		.otherwise('/');
    	$locationProvider.hashPrefix('');
  	}])

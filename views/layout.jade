@@ -55,16 +55,7 @@ html(lang='en',ng-app='App')
                         span.input-group-btn
                           button.btn.btn-default(type='submit')
                             i.fa.fa-search
-                  nav.header-nav-top
-                    ul.nav.nav-pills
-                      li.hidden-xs
-                        a(href='#/about_us')
-                          i.fa.fa-angle-right
-                          |  About Us
-                      li.hidden-xs
-                        a(href='#/contact_us')
-                          i.fa.fa-angle-right
-                          |  Contact Us
+                 
                 .header-row
                   .header-nav
                     button.btn.header-btn-collapse-nav(data-toggle='collapse', data-target='.header-nav-main')
@@ -84,6 +75,16 @@ html(lang='en',ng-app='App')
                           li
                             a.toggle(href='#/find_land')
                               | Find Land
+                          li
+                            a.toggle(href='#/contact_us')
+                              | Contact Us
+                              
+                          li
+                            a.toggle(href='#/about_us')
+                              | About Us 
+                          li
+                            a.toggle(href='#/register')
+                              | Register        
                           li#headerAccount.dropdown.dropdown-mega.dropdown-mega-signin.signin
                             a.dropdown-toggle(href='#')
                               |  Sign In
@@ -127,6 +128,11 @@ html(lang='en',ng-app='App')
                                                 input.form-control.input-lg(type='text', value='')
                                           .row
                                             .form-group
+                                              .col-md-12.p-none
+                                                label Phone number
+                                                input.form-control.input-lg(type='text', value='')        
+                                          .row
+                                            .form-group
                                               .col-md-6.pl-none
                                                 label Password
                                                 input.form-control.input-lg(type='password', value='')
@@ -155,6 +161,7 @@ html(lang='en',ng-app='App')
                                         p.log-in-info
                                           | Already have an account? 
                                           a#headerRecoverCancel.p-none.m-none.ml-xs(href='#') Log In
+    
       
     .container
       block content

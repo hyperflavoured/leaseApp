@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
+//var users = require('./routes/users');
 var views = require('./routes/views');
 var add = require('./routes/add');
 
@@ -41,7 +41,7 @@ mongoose.connect("mongodb://localhost:27017/leaseApp",function(){
 app.use('/', index);
 app.use('/add', add);
 app.use('/view', views);
-app.use('/users', users);
+//app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

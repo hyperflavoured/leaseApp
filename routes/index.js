@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
+var User = require("../models/user");
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
@@ -28,5 +30,37 @@ router.get('/lease', function(req, res, next) {
 router.get('/find_land', function(req, res, next) {
   res.render('partials/find_land', { title: 'Find Land' });
 });
+
+router.get('/register', function(req, res, next) {
+  res.render('partials/register', { title: 'Register' });
+});
+
+//registration
+
+router.post('/index/register', function(req, res, next) {
+  //get form
+  var name=req.body.name;
+  var email=req.body.email;
+  var phone=req.body.phone;
+  var nid=req.body.nid;
+  var password=req.body.password;
+  var password2=req.body.password2;
+  
+
+
+var newUser =new User({
+	name :name,
+	email:email,
+	phone :phone,
+	nid : nid,
+	password: password
+});
+
+//Create user
+User.createUser(newUser, function(user){
+	console.log(user);
+});
+}); 
+
 
 module.exports = router;

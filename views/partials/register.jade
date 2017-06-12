@@ -1,0 +1,70 @@
+
+.main(role='main')
+  
+        .container
+          .row
+            .col-md-12
+              .featured-boxes
+                .row
+                  .col-sm-6
+                    .featured-box.featured-box-primary.align-left.mt-xlg
+                      .box-content
+                        h4.heading-primary.text-uppercase.mb-md I'm a Returning Customer
+                        form#frmSignIn(action='/index/register', method='post')
+                          .row
+                            .form-group
+                              .col-md-12
+                                label Username or E-mail Address
+                                input.form-control.input-lg(type='text', value='')
+                          .row
+                            .form-group
+                              .col-md-12
+                                a.pull-right(href='#') (Lost Password?)
+                                label Password
+                                input.form-control.input-lg(type='password', value='')
+                          .row
+                            .col-md-6
+                              span.remember-box.checkbox
+                                label(for='rememberme')
+                                  input#rememberme(type='checkbox', name='rememberme')
+                                  | Remember Me
+                            .col-md-6
+                              input.btn.btn-primary.pull-right.mb-xl(type='submit', value='Login', data-loading-text='Loading...')
+                  .col-sm-6
+                    .featured-box.featured-box-primary.align-left.mt-xlg
+                      .box-content
+                        h4.heading-primary.text-uppercase.mb-md Register An Account
+                        form#frmSignUp(action='/', method='post')
+                          .row
+                            .form-group
+                              .col-md-12
+                                label Name
+                                input.form-control(name='name',type='text', value='')
+                          .row
+                            .form-group
+                              .col-md-12
+                                label E-mail Address
+                                input.form-control(name='email',type='text', value='') 
+                          .row
+                            .form-group
+                              .col-md-12
+                                label Phone number
+                                input.form-control(name='phone',type='text', value='')
+
+                          .row
+                            .form-group
+                              .col-md-12
+                                label National ID number
+                                input.form-control(name='nid',type='text', value='')                	
+                          .row
+                            .form-group
+                              .col-md-6
+                                label Password
+                                input.form-control(name='password',type='password', value='')
+                              .col-md-6
+                                label Re-enter Password
+                                input.form-control(name='password',type='password', value='')
+                          .row
+                            .col-md-12
+                              input.btn.btn-primary.pull-right.mb-xl(type='submit', value='Register', data-loading-text='Loading...')
+      
