@@ -129,7 +129,7 @@
 				loadAsset: ['$ocLazyLoad', function($ocLazyLoad) {
 					return $ocLazyLoad.load({
 						files : [
-						serverRequestAddr.devServerAdd + '/javascripts/controllers/contactUsCtrl.js',
+						serverRequestAddr.devServerAdd + '/javascripts/controllers/registerCtrl.js',
 						]})
 				}]
 			}

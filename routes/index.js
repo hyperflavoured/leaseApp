@@ -38,28 +38,33 @@ router.get('/register', function(req, res, next) {
 //registration
 
 router.post('/index/register', function(req, res, next) {
-  //get form
-  var name=req.body.name;
-  var email=req.body.email;
-  var phone=req.body.phone;
-  var nid=req.body.nid;
-  var password=req.body.password;
-  var password2=req.body.password2;
-  
+  console.log(req.body);
 
+  var newUser = new User(req.body);
 
-var newUser =new User({
-	name :name,
-	email:email,
-	phone :phone,
-	nid : nid,
-	password: password
-});
+  //Create user
+  newUser.save(function(err,user){
+    if(err){
+      res.status(400).json(err);
+    }else{
+      res.status(200).json({message : "User successfully saved"});
+    }
+  });
 
-//Create user
-User.createUser(newUser, function(user){
-	console.log(user);
-});
+}); 
+router.post('/index/login', function(req, res, next) {
+  console.log(req.body);
+
+  User.find({username : req.body.username},function(err,user){
+    if(err){
+
+    }else if(user){
+      // user.pass === req.body.pass
+    }else{
+
+    }
+  })
+
 }); 
 
 
