@@ -1,0 +1,44 @@
+
+.main(role='main')
+        .container
+          
+                  .col-sm-6
+                    .featured-box.featured-box-primary.align-left.mt-xlg
+                      .box-content
+                        h4.heading-primary.text-uppercase.mb-md Land Registration
+                        form#frmSignUp()
+                          
+                          .row
+                            .form-group
+                              .col-md-12
+                                label Upazilla
+                                input.form-control(ng-model="landreg.upazilla",name='upazilla',type='text') 
+                          .row
+                            .form-group
+                              .col-md-12
+                                label Area
+                                input.form-control(ng-model="landreg.area",name='area',type='text')
+
+                          .row
+                            .form-group
+                              .col-md-6
+                                label Postal Code
+                                input.form-control(ng-model="landreg.postalcode",name='postalcode',type='text')                	
+                          .row
+                            .form-group
+                              .col-md-3
+                                label Jolmohor
+                                input.form-control(ng-model="landreg.jolmohor",name='jolmohor',type='text')
+                              .col-md-3
+                                label Balurmohor
+                                input.form-control(ng-model="landreg.balumohor",name='balumohor',type='text')
+                              .col-md-3
+                                label Chingri-mohor
+                                input.form-control(ng-model="landreg.chingrimohor",name='chingrimohor',type='text')
+                              .col-md-3
+                                label Hatbazar
+                                input.form-control(ng-model="landreg.hatbazar",name='hatbazar',type='text')
+                          .row
+                            .col-md-12
+                              input.btn.btn-primary.pull-right.mb-xl(type='submit', ng-click='formSubmit(landreg)')
+      

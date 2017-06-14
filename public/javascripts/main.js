@@ -134,6 +134,19 @@
 				}]
 			}
         })
+
+        .when('/land', {
+			templateUrl: serverRequestAddr.devServerAdd + '/land', // sends request to server for html page
+			controller: 'landCtrl',
+			resolve: {
+				loadAsset: ['$ocLazyLoad', function($ocLazyLoad) {
+					return $ocLazyLoad.load({
+						files : [
+						serverRequestAddr.devServerAdd + '/javascripts/controllers/landCtrl.js',
+						]})
+				}]
+			}
+        })
 		.otherwise('/');
    	$locationProvider.hashPrefix('');
  	}])

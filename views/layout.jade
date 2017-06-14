@@ -70,8 +70,8 @@ html(lang='en',ng-app='App')
                             a.toggle(href='#/e_tender')
                               | E-tender
                           li
-                            a.toggle(href='#/lease')
-                              | Lease
+                            a.toggle(href='#/land')
+                              | Land
                           li
                             a.toggle(href='#/find_land')
                               | Find Land
@@ -84,83 +84,8 @@ html(lang='en',ng-app='App')
                               | About Us 
                           li
                             a.toggle(href='#/register')
-                              | Register        
-                          li#headerAccount.dropdown.dropdown-mega.dropdown-mega-signin.signin
-                            a.dropdown-toggle(href='#')
-                              |  Sign In
-                            ul.dropdown-menu
-                              li
-                                .dropdown-mega-content
-                                  .row
-                                    .col-md-12
-                                      .signin-form
-                                        span.dropdown-mega-sub-title Sign In
-                                        form#frmSignIn(action='/', method='post')
-                                          .row
-                                            .form-group
-                                              .col-md-12.p-none
-                                                label Username or E-mail Address
-                                                input.form-control.input-lg(type='text', value='', tabindex='1')
-                                          .row
-                                            .form-group
-                                              .col-md-12.p-none
-                                                a#headerRecover.pull-right.mt-none.p-none(href='#') (Lost Password?)
-                                                label Password
-                                                input.form-control.input-lg(type='password', value='', tabindex='2')
-                                          .row
-                                            .col-md-6.pl-none
-                                              span.remember-box.checkbox
-                                                label(for='rememberme')
-                                                  input#rememberme(type='checkbox', name='rememberme')
-                                                  | Remember Me
-                                            .col-md-6.pr-none
-                                              input.btn.btn-primary.pull-right.mb-xl(type='submit', value='Login', data-loading-text='Loading...')
-                                        p.sign-up-info
-                                          | Don't have an account yet? 
-                                          a#headerSignUp.p-none.m-none.ml-xs(href='#') Sign Up
-                                      .signup-form
-                                        span.dropdown-mega-sub-title Create Account
-                                        form#frmSignUp(action='/', method='post')
-                                          .row
-                                            .form-group
-                                              .col-md-12.p-none
-                                                label E-mail Address
-                                                input.form-control.input-lg(type='text', value='')
-                                          .row
-                                            .form-group
-                                              .col-md-12.p-none
-                                                label Phone number
-                                                input.form-control.input-lg(type='text', value='')        
-                                          .row
-                                            .form-group
-                                              .col-md-6.pl-none
-                                                label Password
-                                                input.form-control.input-lg(type='password', value='')
-                                              .col-md-6.pr-none
-                                                label Re-enter Password
-                                                input.form-control.input-lg(type='password', value='')
-                                          .row
-                                            .col-md-12.p-none
-                                              input.btn.btn-primary.pull-right.mb-xl(type='submit', value='Create Account', data-loading-text='Loading...')
-                                        p.log-in-info
-                                          | Already have an account? 
-                                          a#headerSignIn.p-none.m-none.ml-xs(href='#') Log In
-                                      .recover-form
-                                        span.dropdown-mega-sub-title Reset My Password
-                                        p
-                                          | Complete the form below to receive an email with the authorization code needed to reset your password.
-                                        form#frmResetPassword(action='/', method='post')
-                                          .row
-                                            .form-group
-                                              .col-md-12.p-none
-                                                label E-mail Address
-                                                input.form-control.input-lg(type='text', value='')
-                                          .row
-                                            .col-md-12.p-none
-                                              input.btn.btn-primary.pull-right.mb-xl(type='submit', value='Submit', data-loading-text='Loading...')
-                                        p.log-in-info
-                                          | Already have an account? 
-                                          a#headerRecoverCancel.p-none.m-none.ml-xs(href='#') Log In
+                              | Log in        
+                          
     
       
     .container

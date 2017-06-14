@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 var User = require("../models/user");
+var Land =require("../models/land");
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -35,6 +36,8 @@ router.get('/register', function(req, res, next) {
   res.render('partials/register', { title: 'Register' });
 });
 
+
+
 //registration
 
 router.post('/index/register', function(req, res, next) {
@@ -52,18 +55,39 @@ router.post('/index/register', function(req, res, next) {
   });
 
 }); 
-router.post('/index/login', function(req, res, next) {
+// router.post('/index/login', function(req, res, next) {
+//   console.log(req.body);
+
+//   User.find({username : req.body.username},function(err,user){
+//     if(err){
+
+//     }else if(user){
+//       // user.pass === req.body.pass
+//     }else{
+
+//     }
+//   })
+
+// }); 
+
+router.get('/land', function(req, res, next) {
+  res.render('partials/land', { title: 'Land' });
+});
+      /// LAND REGISTRATION ///
+
+router.post('/index/land', function(req, res, next) {
   console.log(req.body);
 
-  User.find({username : req.body.username},function(err,user){
+  var newLand = new Land(req.body);
+
+  //Create land info
+  newLand.save(function(err,land){
     if(err){
-
-    }else if(user){
-      // user.pass === req.body.pass
+      res.status(400).json(err);
     }else{
-
+      res.status(200).json({message : "Land successfully registered"});
     }
-  })
+  });
 
 }); 
 
