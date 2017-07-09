@@ -1,99 +1,109 @@
 .main(role='main')
-
-      section.banner-section
-      section.post-content-section
-        .container
-          .row
-            .col-lg-12.col-md-12.col-sm-12.post-title-block
-              h1.text-center post Title goes here
-              ul.list-inline.text-center
-                li Author |
-                li Category |
-                li Date |
-            .col-lg-8.col-md-8.col-sm-12
-              p.lead
-                | Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.
+  //- section.page-header
+  //-     .container
+  //-       .row
+  //-         .col-md-12
+  //-           ul.breadcrumb
+  //-             li
+  //-               a(href='#') Home
+  //-             li.active About Us
+        
+  .container
+            
+      
+      .row
+        .col-md-12
+          hr.tall
+      .row
+          .col-md-8
+              h3.heading-primary
+                strong What
+                |  We Do
+              |     
               p
-                | Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.
-              .well
-                large This is image
-              p
-                | Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-              blockquote
-                p
-                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
-                footer
-                  | Someone famous in 
-                  cite(title='Source Title') Source Title
-              p
-                | Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.
-              p
-                | Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-              blockquote
-                p
-                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.
-              .image-block
-                img.img-responsive(src='https://static.pexels.com/photos/268455/pexels-photo-268455.jpeg')
-              p
-                | Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-            .col-lg-4.col-md-4.col-sm-12
-              .well
-                h2 Subscription Box
-                p Form Description Goes here
-                .input-group
-                  input.form-control(type='text', placeholder='Search for...')
-                  span.input-group-btn
-                    button.btn.btn-default(type='button') Go!
-              .well
-                h2 Share love
-                ul.list-inline
+                //- |We　are　working　on　heavy　equipment　and　Machinery　site　in　Japan.　We　exports　various　kinds　of　used/reconditioned　industrial　plants　like　Printing　machine,　paper　mill　plant,　water　processing　plant,　oil　processing　plant,　cutting　machine,heavy　industrial　generators　from　japan.　We　are　also　exporting　best　quality　lite used　reconditioned　heavy　equipment　like　crane,　bulldozers,　forklift,　excavators,　dump　truck　etc　in　affordable　price.　Our　experience　provide　us　with　the　capability　to　develop　solutions.　Developing　partnership　with　our　customer　is　important　in　our　commitment　to　provide　total　customer　satisfaction.   
+            |   
+          .col-md-4
+            .featured-box.featured-box-primary
+              .box-content
+                h4.text-uppercase Behind the scenes
+                |         
+                ul.thumbnail-gallery(data-plugin-lightbox='', data-plugin-options="{'delegate': 'a', 'type': 'image', 'gallery': {'enabled': true}}")
                   li
-                    span.glyphicon.glyphicon-heart(aria-hidden='true')
+                    a(title='JPT Heavy machinery', href='images/aboutus1.jpg')
+                      span.thumbnail.mb-none
+                        img(src='images/aboutus1.jpg', alt='' width="70px" height="70px")
+                  |             
                   li
-                    span.glyphicon.glyphicon-heart(aria-hidden='true')
+                    a(title='JPT Heavy machinery', href='images/aboutus2.jpg')
+                      span.thumbnail.mb-none
+                        img(src='images/aboutus2.jpg', alt=''  width="70px" height="70px")
+                  |               
                   li
-                    span.glyphicon.glyphicon-heart(aria-hidden='true')
+                    a(title='JPT Heavy machinery', href='images/aboutus3.jpg' )
+                      span.thumbnail.mb-none
+                        img(src='images/aboutus3.jpg', alt='' width="70px" height="70px")
+                  |                 
                   li
-                    span.glyphicon.glyphicon-heart(aria-hidden='true')
-              .well
-                h2 About Author
-                img.img-rounded(src='')
-                p
-                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                a.btn.btn-default(href='#') Read more
-              .list-group
-                a.list-group-item(href='#')
-                  h4.list-group-item-heading List group item heading
-                  p.list-group-item-text
-                    | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
-                a.list-group-item(href='#')
-                  h4.list-group-item-heading List group item heading
-                  p.list-group-item-text
-                    | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
-                a.list-group-item(href='#')
-                  h4.list-group-item-heading List group item heading
-                  p.list-group-item-text
-                    | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
-              .well
-                .media
-                  .media-left
-                    a(href='#')
-                      img.media-object(data-src='holder.js/64x64', alt='64x64', style='width: 64px; height: 64px;', src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTY5MjIxZTM1NSB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1NjkyMjFlMzU1Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxMi41IiB5PSIzNi44Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==', data-holder-rendered='true')
-                  .media-body
-                    h4.media-heading Media heading
-                    |  Cras sit amet nibh libero, in gravida nulla.
-                .media
-                  .media-left
-                    a(href='#')
-                      img.media-object(data-src='holder.js/64x64', alt='64x64', style='width: 64px; height: 64px;', src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTY5MjIxZTM1NSB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1NjkyMjFlMzU1Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxMi41IiB5PSIzNi44Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==', data-holder-rendered='true')
-                  .media-body
-                    h4.media-heading Media heading
-                    |  Cras sit amet nibh libero, in gravida nulla.
-                .media
-                  .media-left
-                    a(href='#')
-                      img.media-object(data-src='holder.js/64x64', alt='64x64', style='width: 64px; height: 64px;', src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTY5MjIxZTM1NSB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1NjkyMjFlMzU1Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxMi41IiB5PSIzNi44Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==', data-holder-rendered='true')
-                  .media-body
-                    h4.media-heading Media heading
-                    |  Cras sit amet nibh libero, in gravida nulla.
-        // /container
+                    a(title='JPT Heavy machinery', href='images/aboutus4.jpg' )
+                      span.thumbnail.mb-none
+                        img(src='images/aboutus4.jpg', alt='' width="70px" height="70px")
+                  |                   
+                  li
+                    a(title='JPT Heavy machinery', href='images/aboutus5.jpg' )
+                      span.thumbnail.mb-none
+                        img(src='images/aboutus5.jpg', alt='' width="70px" height="70px")
+                  |                     
+                  li
+                    a(title='JPT Heavy machinery', href='images/aboutus6.jpg' )
+                      span.thumbnail.mb-none
+                        img(src='images/aboutus6.jpg', alt='' width="70px" height="70px")
+      .row
+          .col-md-12
+              hr.tall
+          |   
+      .row
+        .col-md-12
+          h3.heading-primary.mt-xl
+            | Our 
+            strong History
+      .row
+          .col-md-12
+              ul.history
+                
+                li.appear-animation(data-appear-animation='fadeInUp')
+                  .thumb
+                    img(src='images/aboutus6.jpg', alt='JPT Heavy machinery')
+                  |         
+                  .featured-box
+                    .box-content
+                      h4.heading-primary
+                        strong 2010
+                      |             
+                      p
+                      | Our paper mill factory has begun its journey with the ambition to diversify our JPT group.By providing substantial volume of quality paper, JPT has succeeded to reduce the gap between demand and supply of paper in the country. This has resulted to curtail the volume of import of paper and to save the hard earned foreign currency. A team of professionals has been engaged in running mill since it had stepped in. This management team is of high commercial and technological caliber and assumes a real international status with profound degree of specialization in the field of paper production. 
+                |       
+                li.appear-animation(data-appear-animation='fadeInUp')
+                  .thumb
+                    img(src='images/aboutus7.jpg', alt='JPT Heavy machinery')
+                  |         
+                  .featured-box
+                    .box-content
+                      h4.heading-primary
+                        strong 2005
+                      |             
+                      p
+                      | After a few years of starting the heavy machineries venture ,the upsurge demand of electronics came to our notice and we observe that we can create a massive dent in the sector by providing the best electronic eqiptment with the best customer service  
+                |       
+                li.appear-animation(data-appear-animation='fadeInUp')
+                  .thumb
+                    img(src='images/aboutus1.jpg', alt='JPT Heavy machinery')
+                  |         
+                  .featured-box
+                    .box-content
+                      h4.heading-primary
+                        strong 2000
+                      |             
+                      p
+                      | This is our first venture.We started selling all kinds of heavy machineries for the infrastructure sector.Over time, we started to offer an array of machineries needed for the facilitation of their work.
+script(src='js/theme.init.js')

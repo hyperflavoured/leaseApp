@@ -1,68 +1,76 @@
 doctype html
 html(lang='en',ng-app='App')
   head
+    // Basic
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    // The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
-    title Lease App
-    //Favicon
-    link(rel='shortcut icon', href='stylesheets/img/favicon.ico', type='image/x-icon')
-    link(rel='apple-touch-icon', href='stylesheets/img/apple-touch-icon.png')
+    title Lease land management system
+    meta(name='keywords', content='HTML5 Template')
+    meta(name='description', content='Porto - Responsive HTML5 Template')
+    meta(name='author', content='okler.net')
+    // Favicon
+    link(rel='shortcut icon', href='img/favicon.ico', type='image/x-icon')
+    link(rel='apple-touch-icon', href='img/apple-touch-icon.png')
     // Mobile Metas
     meta(name='viewport', content='width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no')
     // Web Fonts
-    //link(href='https://fonts.googleapis.com/css?family=Oswald:300,400,600,700,800%7CShadows+Into+Light', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light', rel='stylesheet', type='text/css')
     // Vendor CSS
-    link(rel='stylesheet', href='stylesheets/vendor/bootstrap/css/bootstrap.min.css')
-    link(rel='stylesheet', href='stylesheets/vendor/font-awesome/css/font-awesome.min.css')
-    link(rel='stylesheet', href='stylesheets/vendor/animate/animate.min.css')
-    link(rel='stylesheet', href='stylesheets/vendor/simple-line-icons/css/simple-line-icons.min.css')
-    link(rel='stylesheet', href='stylesheets/vendor/owl.carousel/assets/owl.carousel.min.css')
-    link(rel='stylesheet', href='stylesheets/vendor/owl.carousel/assets/owl.theme.default.min.css')
-    link(rel='stylesheet', href='stylesheets/vendor/magnific-popup/magnific-popup.min.css')
+    link(rel='stylesheet', href='vendor/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='vendor/font-awesome/css/font-awesome.min.css')
+    link(rel='stylesheet', href='vendor/animate/animate.min.css')
+    link(rel='stylesheet', href='vendor/simple-line-icons/css/simple-line-icons.min.css')
+    link(rel='stylesheet', href='vendor/owl.carousel/assets/owl.carousel.min.css')
+    link(rel='stylesheet', href='vendor/owl.carousel/assets/owl.theme.default.min.css')
+    link(rel='stylesheet', href='vendor/magnific-popup/magnific-popup.min.css')
     // Theme CSS
-    link(rel='stylesheet', href='stylesheets/css/theme.css')
-    link(rel='stylesheet', href='stylesheets/css/theme-elements.css')
-    link(rel='stylesheet', href='stylesheets/css/theme-blog.css')
-    link(rel='stylesheet', href='stylesheets/css/theme-shop.css')
+    link(rel='stylesheet', href='css/theme.css')
+    link(rel='stylesheet', href='css/theme-elements.css')
+    link(rel='stylesheet', href='css/theme-blog.css')
+    link(rel='stylesheet', href='css/theme-shop.css')
     // Current Page CSS
-    link(rel='stylesheet', href='stylesheets/vendor/rs-plugin/css/settings.css')
-    link(rel='stylesheet', href='stylesheets/vendor/rs-plugin/css/layers.css')
-    link(rel='stylesheet', href='stylesheets/vendor/rs-plugin/css/navigation.css')
-    link(rel='stylesheet', href='stylesheets/vendor/circle-flip-slideshow/css/component.css')
+    link(rel='stylesheet', href='vendor/rs-plugin/css/settings.css')
+    link(rel='stylesheet', href='vendor/rs-plugin/css/layers.css')
+    link(rel='stylesheet', href='vendor/rs-plugin/css/navigation.css')
     // Skin CSS
-    link(rel='stylesheet', href='stylesheets/css/skins/default.css')
+    link(rel='stylesheet', href='css/skins/skin-corporate-4.css')
     // Theme Custom CSS
-    link(rel='stylesheet', href='stylesheets/css/custom.css')
+    link(rel='stylesheet', href='css/custom.css')
     // Head Libs
-    script(src='stylesheets/vendor/modernizr/modernizr.min.js')
+    script(src='vendor/modernizr/modernizr.min.js')
   body
-    header#header(data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyStartAt': 57, 'stickySetTop': '-57px', 'stickyChangeLogo': true}")
+    .body
+      header#header(data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyStartAt': 57, 'stickySetTop': '-57px', 'stickyChangeLogo': true}")
         .header-body
           .header-container.container
             .header-row
               .header-column
                 .header-logo
                   a(href='index.html')
-                    img(alt='', height='160',width='160',data-sticky-width='100', data-sticky-height='100', data-sticky-top='50', src='stylesheets/imgs/logo.png')
+                    img(alt='', height='100',width='160',data-sticky-width='60', data-sticky-height='80', data-sticky-top='50', src='img/bdlogo.jpg')
               .header-column
                 .header-row
-                  //.header-search.hidden-xs
+                  .header-search.hidden-xs
                     form#searchForm(action='page-search-results.html', method='get')
                       .input-group
                         input#q.form-control(type='text', name='q', placeholder='Search...', required='')
                         span.input-group-btn
                           button.btn.btn-default(type='submit')
                             i.fa.fa-search
-                 
+                  
                 .header-row
                   .header-nav
                     button.btn.header-btn-collapse-nav(data-toggle='collapse', data-target='.header-nav-main')
                       i.fa.fa-bars
+                    ul.header-social-icons.social-icons.hidden-xs
+                      li.social-icons-facebook
+                        a(href='http://www.facebook.com/', target='_blank', title='Facebook')
+                          i.fa.fa-facebook
+                      
                     .header-nav-main.header-nav-main-effect-1.header-nav-main-sub-effect-1.collapse
                       nav
                         ul#mainNav.nav.nav-pills
+                          
                           li
                             a.toggle(href='#/home')
                               | Home
@@ -85,27 +93,310 @@ html(lang='en',ng-app='App')
                           li
                             a.toggle(href='#/register')
                               | Log in        
-                          
-    
-      
-    .container
-      block content
-    // /.container
-    // jQuery (necessary for Bootstrap's JavaScript plugins)
-    script(src='stylesheets/vendor/jquery/jquery.min.js')
+      .main(role='main')
+        .slider-container.rev_slider_wrapper
+          #revolutionSlider.slider.rev_slider(data-plugin-revolution-slider='', data-plugin-options="{'delay': 9000, 'gridwidth': 1170, 'gridheight': 500}")
+            ul
+              li(data-transition='fade')
+                img.rev-slidebg(src='img/header.jpg', alt='', data-bgposition='center center', data-bgfit='cover', data-bgrepeat='no-repeat')
+                .tp-caption(data-x='177', data-y='188', data-start='1000', data-transform_in='x:[-300%];opacity:0;s:500;')
+                  img(src='img/slides/slide-title-border-light.png', alt='')
+                .tp-caption.top-label(data-x='227', data-y='180', data-start='500', data-transform_in='y:[-300%];opacity:0;s:500;') Welcome to LEASE
+                .tp-caption(data-x='480', data-y='188', data-start='1000', data-transform_in='x:[300%];opacity:0;s:500;')
+                  img(src='img/slides/slide-title-border-light.png', alt='')
+                .tp-caption.main-label(data-x='135', data-y='210', data-start='1500', data-whitespace='nowrap', data-transform_in='y:[100%];s:500;', data-transform_out='opacity:0;s:500;', data-mask_in='x:0px;y:0px;')  LAND MANAGEMENT SYSTEM
+                
+              li(data-transition='fade')
+                img.rev-slidebg(src='img/land2.jpg', alt='', data-bgposition='center center', data-bgfit='cover', data-bgrepeat='no-repeat')
+                .tp-caption.featured-label(data-x='center', data-y='210', data-start='500', style='z-index: 5', data-transform_in='y:[100%];s:500;', data-transform_out='opacity:0;s:500;') Bangladesh 
+                .tp-caption.bottom-label(data-x='center', data-y='270', data-start='1000', data-transform_idle='o:1;', data-transform_in='y:[100%];z:0;rZ:-35deg;sX:1;sY:1;skX:0;skY:0;s:600;e:Power4.easeInOut;', data-transform_out='opacity:0;s:500;', data-mask_in='x:0px;y:0px;s:inherit;e:inherit;', data-splitin='chars', data-splitout='none', data-responsive_offset='on', style='font-size: 23px; line-height: 30px;', data-elementdelay='0.05') 
+        //- #home-intro.home-intro
+        //-   .container
+        //-     .row
+        //-       .col-md-8
+        //-         p
+        //-           | The fastest way to grow your business with the leader in 
+        //-           em Technology
+        //-           span Check out our options and features included.
+        //-       .col-md-4
+        //-         .get-started
+        //-           a.btn.btn-lg.btn-primary(href='#') Get Started Now!
+        //-           .learn-more
+        //-             | or 
+        //-             a(href='index.html') learn more.
+        .container
+          .row
+            .col-md-12
+              h2
+                | Our 
+                strong Services
+          .row
+            .col-md-4
+              .feature-box.feature-box-style-2.appear-animation(data-appear-animation='fadeInUp', data-appear-animation-delay='0')
+                .feature-box-icon
+                  i.icon-user-following.icons
+                .feature-box-info
+                  h4.mb-sm Customer Support
+                  p.mb-lg
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing metus elit. Quisque rutrum pellentesque imperdiet.
+            .col-md-4
+              .feature-box.feature-box-style-2.appear-animation(data-appear-animation='fadeInUp', data-appear-animation-delay='0')
+                .feature-box-icon
+                  i.icon-layers.icons
+                .feature-box-info
+                  h4.mb-sm E-Tender 
+                  p.mb-lg
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing metus elit. Quisque rutrum pellentesque imperdiet.
+            .col-md-4
+              .feature-box.feature-box-style-2.appear-animation(data-appear-animation='fadeInUp', data-appear-animation-delay='0')
+                .feature-box-icon
+                  i.icon-calculator.icons
+                .feature-box-info
+                  h4.mb-sm Land details
+                  p.mb-lg
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing metus elit. Quisque rutrum pellentesque imperdiet.
+          //- .row.mt-md
+          //-   .col-md-4
+          //-     .feature-box.feature-box-style-2.appear-animation(data-appear-animation='fadeInUp', data-appear-animation-delay='300')
+          //-       .feature-box-icon
+          //-         i.icon-star.icons
+          //-       .feature-box-info
+          //-         h4.mb-sm Icons
+          //-         p.mb-lg
+          //-           | Lorem ipsum dolor sit amet, consectetur adipiscing metus elit. Quisque rutrum pellentesque imperdiet.
+          //-   .col-md-4
+          //-     .feature-box.feature-box-style-2.appear-animation(data-appear-animation='fadeInUp', data-appear-animation-delay='300')
+          //-       .feature-box-icon
+          //-         i.icon-drop.icons
+          //-       .feature-box-info
+          //-         h4.mb-sm Colors
+          //-         p.mb-lg
+          //-           | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum pellentesque imperdiet. Nulla lacinia iaculis nulla.
+          //-   .col-md-4
+          //-     .feature-box.feature-box-style-2.appear-animation(data-appear-animation='fadeInUp', data-appear-animation-delay='300')
+          //-       .feature-box-icon
+          //-         i.icon-mouse.icons
+          //-       .feature-box-info
+          //-         h4.mb-sm Buttons
+          //-         p.mb-lg
+          //-           | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum pellentesque imperdiet. Nulla lacinia iaculis nulla.
+          //- .row.mt-md.mb-xl
+          //-   .col-md-4
+          //-     .feature-box.feature-box-style-2.appear-animation(data-appear-animation='fadeInUp', data-appear-animation-delay='600')
+          //-       .feature-box-icon
+          //-         i.icon-screen-desktop.icons
+          //-       .feature-box-info
+          //-         h4.mb-sm Lightboxes
+          //-         p.mb-lg
+          //-           | Lorem ipsum dolor sit amet, consectetur adipiscing metus elit. Quisque rutrum pellentesque imperdiet.
+          //-   .col-md-4
+          //-     .feature-box.feature-box-style-2.appear-animation(data-appear-animation='fadeInUp', data-appear-animation-delay='600')
+          //-       .feature-box-icon
+          //-         i.icon-energy.icons
+          //-       .feature-box-info
+          //-         h4.mb-sm Shortcodes
+          //-         p.mb-lg
+          //-           | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum pellentesque imperdiet. Nulla lacinia iaculis nulla.
+          //-   .col-md-4
+          //-     .feature-box.feature-box-style-2.appear-animation(data-appear-animation='fadeInUp', data-appear-animation-delay='600')
+          //-       .feature-box-icon
+          //-         i.icon-social-youtube.icons
+          //-       .feature-box-info
+          //-         h4.mb-sm Videos
+          //-         p.mb-lg
+          //-           | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum pellentesque imperdiet. Nulla lacinia iaculis nulla.
+        section.parallax.section.section-text-light.section-parallax.section-center.mt-xl.mb-none(data-plugin-parallax='', data-plugin-options="{'speed': 1.5}", data-image-src='img/parallax-6.jpg')
+          .container
+            .row
+              .col-md-10.col-md-offset-1
+                .owl-carousel.owl-theme.nav-bottom.rounded-nav(data-plugin-options="{'items': 1, 'loop': false}")
+                  div
+                    .col-md-12
+                      .testimonial.testimonial-style-2.testimonial-with-quotes.mb-none
+                        //- .testimonial-author
+                        //-   img.img-responsive.img-circle(src='img/clients/client-1.jpg', alt='')
+                        blockquote
+                          p
+                            | Dont underestimate the power of master moshai
+                        .testimonial-author
+                          p
+                            strong Mohammad Monirujjam Khan
+                            span 
+                  div
+                    .col-md-12
+                      .testimonial.testimonial-style-2.testimonial-with-quotes.mb-none
+                        .testimonial-author
+                          img.img-responsive.img-circle(src='img/clients/client-1.jpg', alt='')
+                        blockquote
+                          p
+                            | 
+                        .testimonial-author
+                          p
+                            strong John Smith
+                            span CEO & Founder - Okler
+        
+        .container
+
+            .col-md-12
+             
+              .row
+                .counters
+                  .col-md-3.col-sm-6
+                    .counter
+                      strong(data-to='160', data-append='+') 0
+                      label Million people
+                  .col-md-3.col-sm-6
+                    .counter
+                      strong(data-to='8') 0
+                      label Divisions
+                  .col-md-3.col-sm-6
+                    .counter
+                      strong(data-to='64') 0
+                      label Districts
+                  .col-md-3.col-sm-6
+                    .counter
+                      strong(data-to='491') 0
+                      label Upazilas
+
+        //- .container
+        //-   .row
+        //-     .col-md-12
+        //-       h2.mt-xl
+        //-         | Our 
+        //-         strong Portfolio
+        //-       .owl-carousel.owl-theme.mb-none(data-plugin-options="{'items': 4, 'margin': 0, 'loop': false}")
+        //-         div
+        //-           a(href='portfolio-single.html')
+        //-             img.img-responsive(src='img/projects/project-9.jpg', alt='')
+        //-         div
+        //-           a(href='portfolio-single.html')
+        //-             img.img-responsive(src='img/projects/project-12.jpg', alt='')
+        //-         div
+        //-           a(href='portfolio-single.html')
+        //-             img.img-responsive(src='img/projects/project-11.jpg', alt='')
+        //-         div
+        //-           a(href='portfolio-single.html')
+        //-             img.img-responsive(src='img/projects/project-8.jpg', alt='')
+        //-         div
+        //-           a(href='portfolio-single.html')
+        //-             img.img-responsive(src='img/projects/project-9.jpg', alt='')
+        //-         div
+        //-           a(href='portfolio-single.html')
+        //-             img.img-responsive(src='img/projects/project-12.jpg', alt='')
+      footer#footer
+        .container
+          .row
+            .footer-ribbon
+              span Get in Touch
+            .col-md-3
+              .newsletter
+                h4 Newsletter
+                p
+                  | Keep up on our always evolving product features and technology. Enter your e-mail and subscribe to our newsletter.
+                #newsletterSuccess.alert.alert-success.hidden
+                  strong Success!
+                  |  You've been added to our email list.
+                #newsletterError.alert.alert-danger.hidden
+                form#newsletterForm(action='php/newsletter-subscribe.php', method='POST')
+                  .input-group
+                    input#newsletterEmail.form-control(placeholder='Email Address', name='newsletterEmail', type='text')
+                    span.input-group-btn
+                      button.btn.btn-default(type='submit') Go!
+            .col-md-3
+              h4 For Latest News              
+              p
+                | Stay conected with us.....
+            .col-md-4
+              .contact-details
+                h4 Contact Us
+                ul.contact
+                  li
+                    p
+                      i.fa.fa-map-marker
+                      strong Address:
+                      |  1234 Street Name, City Name, Bangladesh
+                  li
+                    p
+                      i.fa.fa-phone
+                      strong Phone:
+                      |  (123) 456-789
+                  li
+                    p
+                      i.fa.fa-envelope
+                      strong Email:
+                      a(href='mailto:mail@example.com') mail@example.com
+            .col-md-2
+              h4 Follow Us
+              ul.social-icons
+                li.social-icons-facebook
+                  a(href='http://www.facebook.com/', target='_blank', title='Facebook')
+                    i.fa.fa-facebook
+                
+        .footer-copyright
+          .container
+            .row
+              .col-md-1
+                //- a.logo(href='index.html')
+                //-   img.img-responsive(alt='Porto Website Template', src='img/logo-footer.png')
+              .col-md-7
+                p © Copyright 2017. All Rights Reserved.
+              .col-md-4
+                nav#sub-menu
+                  ul
+                    li
+                      a(href='page-faq.html') FAQ's
+                    li
+                      a(href='sitemap.html') Sitemap
+                    li
+                      a(href='contact-us.html') Contact
+    // Vendor
+    script(src='vendor/jquery/jquery.min.js')
+    script(src='vendor/jquery.appear/jquery.appear.min.js')
+    script(src='vendor/jquery.easing/jquery.easing.min.js')
+    script(src='vendor/jquery-cookie/jquery-cookie.min.js')
+    script(src='vendor/bootstrap/js/bootstrap.min.js')
+    script(src='vendor/common/common.min.js')
+    script(src='vendor/jquery.validation/jquery.validation.min.js')
+    script(src='vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.min.js')
+    script(src='vendor/jquery.gmap/jquery.gmap.min.js')
+    script(src='vendor/jquery.lazyload/jquery.lazyload.min.js')
+    script(src='vendor/isotope/jquery.isotope.min.js')
+    script(src='vendor/owl.carousel/owl.carousel.min.js')
+    script(src='vendor/magnific-popup/jquery.magnific-popup.min.js')
+    script(src='vendor/vide/vide.min.js')
     // Theme Base, Components and Settings
-    script(src='stylesheets/js/theme.js')
+    script(src='js/theme.js')
     // Current Page Vendor and Views
-    script(src='stylesheets/vendor/rs-plugin/js/jquery.themepunch.tools.min.js')
-    script(src='stylesheets/vendor/rs-plugin/js/jquery.themepunch.revolution.min.js')
+    script(src='vendor/rs-plugin/js/jquery.themepunch.tools.min.js')
+    script(src='vendor/rs-plugin/js/jquery.themepunch.revolution.min.js')
     // Theme Custom
-    script(src='stylesheets/js/custom.js')
+    script(src='js/custom.js')
     // Theme Initialization Files
-    script(src='stylesheets/js/theme.init.js')
+    script(src='js/theme.init.js')
     //
-    // Include all compiled plugins (below), or include individual files as needed
-    // Bower Component Additions
+      Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information.
+      <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-12345678-1', 'auto');
+      ga('send', 'pageview');
+      </script>
+
+      // Bower Component Additions
     script(src='bower_components/angular/angular.js')
     script(src='bower_components/angular-route/angular-route.js')
     script(src='bower_components/oclazyload/dist/ocLazyLoad.js')
-    script(src='javascripts/main.js')
+    script(src='javascripts/main.js') 
+
+     // BOWER ADDITIONS CSS
+    link(rel='stylesheet', href='bower_components/sweetalert2/dist/sweetalert2.min.css')
+    link(rel='stylesheet', href='/bower_components/dropzone/dist/min/dropzone.min.css')
+    link(rel='stylesheet', href='/bower_components/ng-dropzone/dist/ng-dropzone.min.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js')
+    // END OF BOWER ADDITIONS CSS
+
+    // MY ADDITIONS
+    link(rel='stylesheet', href='spinners/spinner.css')
+    // END OF MY ADDITIONS
