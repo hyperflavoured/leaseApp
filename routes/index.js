@@ -33,6 +33,7 @@ router.get('/find_land', function(req, res, next) {
 });
 
 router.get('/register', function(req, res, next) {
+  console.log("flsjklskjsd");
   res.render('partials/register', { title: 'Register' });
 });
 

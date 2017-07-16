@@ -1,0 +1,42 @@
+//- head
+//- 	style.
+//- 	  table {
+//- 	  font-family: arial, sans-serif;
+//- 	  border-collapse: collapse;
+//- 	  width: 100%;
+//- 	  }
+//- 	  td, th {
+//- 	  border: 1px solid #dddddd;
+//- 	  text-align: left;
+//- 	  padding: 8px;
+//- 	  }
+//- 	  tr:nth-child(even) {
+//- 	  background-color: #dddddd;
+//- 	  }
+
+
+table 
+	thead
+		tr
+			th Upazilla
+			th Area
+			th Postal Code
+			th Jol-mohor
+			th Balu-mohor
+			th Chingri-mohor
+			th Hat-Bazar
+	tbody
+		tr(ng-repeat = "land in landList")
+			td {{land.upazilla}}
+			td {{land.area}}
+			td {{land.postalcode}}
+			td {{land.jolmohor}}
+			td {{land.balumohor}}
+			td {{land.chingrimohor}}
+			td {{land.hatbazar}}
+
+			td 
+				button(ng-click="landDelete(land._id)") Delete
+
+
+	
