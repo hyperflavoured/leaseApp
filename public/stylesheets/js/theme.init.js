@@ -1,4 +1,4 @@
-// Commom Plugins
+	// Commom Plugins
 (function($) {
 
 	'use strict';

@@ -11,6 +11,11 @@ var views = require('./routes/views');
 var add = require('./routes/add');
 var findLand = require("./routes/findLand");
 var landDelete = require("./routes/landDelete");
+var userlist = require("./routes/userlist");
+var userDelete = require("./routes/userDelete");
+
+
+// var login=require("./routes/login");
 
 
 var app = express();
@@ -45,6 +50,10 @@ app.use('/add', add);
 app.use('/view', views);
 app.use("/", findLand);
 app.use("/", landDelete);
+app.use("/", userlist);
+app.use("/", userDelete);
+
+// app.use("/login",login)
 
 //app.use('/users', users);
 

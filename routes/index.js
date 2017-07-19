@@ -28,8 +28,12 @@ router.get('/lease', function(req, res, next) {
   res.render('partials/lease', { title: 'Lease' });
 });
 
-router.get('/find_land', function(req, res, next) {
-  res.render('partials/find_land', { title: 'Find Land' });
+// router.get('/find_land', function(req, res, next) {
+//   res.render('partials/find_land', { title: 'Find Land' });
+// });
+
+router.get('/user_list', function(req, res, next) {
+  res.render('partials/user_list', { title: 'User List' });
 });
 
 router.get('/register', function(req, res, next) {
@@ -91,6 +95,11 @@ router.post('/index/land', function(req, res, next) {
   });
 
 }); 
+
+
+router.get('/login', function(req, res, next) {
+  res.render('partials/login', { title: 'login' });
+});
 
 
 module.exports = router;

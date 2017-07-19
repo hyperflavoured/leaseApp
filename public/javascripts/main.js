@@ -147,6 +147,34 @@
 				}]
 			}
         })
+
+        .when('/login', {
+			templateUrl: serverRequestAddr.devServerAdd + '/login', // sends request to server for html page
+			controller: 'loginCtrl',
+			resolve: {
+				loadAsset: ['$ocLazyLoad', function($ocLazyLoad) {
+					return $ocLazyLoad.load({
+						files : [
+						serverRequestAddr.devServerAdd + '/javascripts/controllers/loginCtrl.js',
+						]})
+				}]
+			}
+        })
+
+
+
+        .when('/user_list', {
+			templateUrl: serverRequestAddr.devServerAdd + '/user_list', // sends request to server for html page
+			controller: 'userlistCtrl',
+			resolve: {
+				loadAsset: ['$ocLazyLoad', function($ocLazyLoad) {
+					return $ocLazyLoad.load({
+						files : [
+						serverRequestAddr.devServerAdd + '/javascripts/controllers/userlistCtrl.js',
+						]})
+				}]
+			}
+        })
 		.otherwise('/');
    	$locationProvider.hashPrefix('');
  	}])

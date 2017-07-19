@@ -1,5 +1,5 @@
 doctype html
-html.grey(lang='en',ng-app='App')
+html.boxed(lang='en',ng-app='App')
   head
     // Basic
     meta(charset='utf-8')
@@ -57,6 +57,7 @@ html.grey(lang='en',ng-app='App')
                         span.input-group-btn
                           button.btn.btn-default(type='submit')
                             i.fa.fa-search
+                          button
                   
                 .header-row
                   .header-nav
@@ -92,7 +93,16 @@ html.grey(lang='en',ng-app='App')
                               | About Us 
                           li
                             a.toggle(href='#/register')
-                              | Log in        
+                              | Register        
+                          li
+                            a.toggle(href='#/login')
+                              | Log in
+                          li
+                            a.toggle(href='#/user_list')
+                              | User List
+                          li
+                            a.toggle(href='#/user_list')
+                              | Admin panel
       resovle-loader
       block content
 
