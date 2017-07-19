@@ -1,19 +1,28 @@
-table
-	thead
-		tr
-			th Username
-			th  email
-			th contact number
-			th NID
-			
-	tbody
-		tr(ng-repeat = "user in userList")
-			td {{user.username}}
-			td {{user.email}}
-			td {{user.phonenumber}}
-			td {{user.nid}}
-			
-
-			td 
-				button(ng-click="userDelete(user._id)") Delete
-				button(ng-click="userDelete(user._id)") Edit
+.container
+	.row
+		.col-md-2
+		.col-md-8
+			h1 User List
+			table.table-striped
+				thead
+					tr
+						th Username
+						th Email
+						th Contact Number
+						th NID
+					tr
+						th
+							input(type="text", ng-model="user.username", ng-keyup="getUserList(user)")
+						th
+							input(type="text", ng-model="user.email", ng-keyup="getUserList(user)")
+						th
+							input(type="text", ng-model="user.phoneNumber", ng-keyup="getUserList(user)")
+						th
+							input(type="text", ng-model="user.nid", ng-keyup="getUserList(user)")
+				tbody
+					tr(ng-repeat = "user in userList")
+						td(ng-bind="user.username")
+						td(ng-bind="user.email")
+						td(ng-bind="user.phoneNumber")
+						td(ng-bind="user.nid")
+		.col-md-2

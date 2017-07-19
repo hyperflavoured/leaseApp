@@ -9,13 +9,11 @@ var index = require('./routes/index');
 //var users = require('./routes/users');
 var views = require('./routes/views');
 var add = require('./routes/add');
-var findLand = require("./routes/findLand");
-var landDelete = require("./routes/landDelete");
-var userlist = require("./routes/userlist");
-var userDelete = require("./routes/userDelete");
 
+var land = require("./routes/land");
+var user = require("./routes/user");
+var login = require("./routes/login");
 
-// var login=require("./routes/login");
 
 
 var app = express();
@@ -48,10 +46,12 @@ mongoose.connect("mongodb://localhost:27017/leaseApp",function(){
 app.use('/', index);
 app.use('/add', add);
 app.use('/view', views);
-app.use("/", findLand);
-app.use("/", landDelete);
-app.use("/", userlist);
-app.use("/", userDelete);
+
+app.use("/", land);
+app.use("/", user);
+app.use("/", login);
+
+
 
 // app.use("/login",login)
 

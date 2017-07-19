@@ -98,7 +98,7 @@
 			}
         })
         .when('/find_land', {
-			templateUrl: serverRequestAddr.devServerAdd + '/find_land', // sends request to server for html page
+			templateUrl: serverRequestAddr.devServerAdd + '/find_land_page', // sends request to server for html page
 			controller: 'findLandCtrl',
 			resolve: {
 				loadAsset: ['$ocLazyLoad', function($ocLazyLoad) {
@@ -135,9 +135,9 @@
 			}
         })
 
-        .when('/land', {
-			templateUrl: serverRequestAddr.devServerAdd + '/land', // sends request to server for html page
-			controller: 'landCtrl',
+        .when('/land_registration', {
+			templateUrl: serverRequestAddr.devServerAdd + '/land_registration', // sends request to server for html page
+			controller: 'landRegistrationCtrl',
 			resolve: {
 				loadAsset: ['$ocLazyLoad', function($ocLazyLoad) {
 					return $ocLazyLoad.load({
@@ -164,7 +164,7 @@
 
 
         .when('/user_list', {
-			templateUrl: serverRequestAddr.devServerAdd + '/user_list', // sends request to server for html page
+			templateUrl: serverRequestAddr.devServerAdd + '/user_list_page', // sends request to server for html page
 			controller: 'userlistCtrl',
 			resolve: {
 				loadAsset: ['$ocLazyLoad', function($ocLazyLoad) {

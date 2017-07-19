@@ -8,14 +8,17 @@
 	*/
 	angular.module('App')
 	.controller('findLandCtrl', ['$scope',"serverRequestAddr","$http", function($scope, serverRequestAddr, $http){
-		$scope.getLandList = function(){
+		$scope.getLandList = function(land){
 
 			$http({
 				"method" : "POST",
-				"url" : serverRequestAddr.devServerAdd + "/find_land"
+				"url" : "/land_list",
+				"data" : {
+					"findQuery" : land
+				}
 			}).then(function(response){
 				console.log(response);
-				$scope.landList = response.data;
+				$scope.landList = response.data.landList;
 			}, function(errorResponse){
 				console.log(errorResponse);
 			});

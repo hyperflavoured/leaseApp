@@ -7,7 +7,7 @@
 	* Description
 	*/
 	angular.module('App')
-	.controller('landCtrl', ['$scope','$http', function($scope,$http){
+	.controller('landRegistrationCtrl', ['$scope','$http', function($scope,$http){
 		//$scope.passMatch = true;
 		$scope.formSubmit = function(landreg){
 			console.log(landreg);
@@ -15,7 +15,7 @@
 			//	$scope.passMatch = true;
 			 	$http({
 				  method: 'POST',
-				  url: '/index/land',
+				  url: '/land_register',
 				  data : landreg
 				}).then(function successCallback(response) {
 				  	console.log(response);

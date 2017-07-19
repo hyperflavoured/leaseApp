@@ -1,8 +1,6 @@
 var express = require('express');
 var router = express.Router();
 
-var User = require("../models/user");
-var Land =require("../models/land");
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -28,73 +26,26 @@ router.get('/lease', function(req, res, next) {
   res.render('partials/lease', { title: 'Lease' });
 });
 
-// router.get('/find_land', function(req, res, next) {
-//   res.render('partials/find_land', { title: 'Find Land' });
-// });
+router.get('/find_land_page', function(req, res, next) {
+  console.log("lsdkjflsdjsdflajalfsjlfsdk");
+  res.render('partials/find_land', { title: 'Find Land' });
+});
 
-router.get('/user_list', function(req, res, next) {
+router.get('/user_list_page', function(req, res, next) {
   res.render('partials/user_list', { title: 'User List' });
 });
 
 router.get('/register', function(req, res, next) {
-  console.log("flsjklskjsd");
+  // console.log("flsjklskjsd");
   res.render('partials/register', { title: 'Register' });
 });
 
 
 
-//registration
-
-router.post('/index/register', function(req, res, next) {
-  console.log(req.body);
-
-  var newUser = new User(req.body);
-
-  //Create user
-  newUser.save(function(err,user){
-    if(err){
-      res.status(400).json(err);
-    }else{
-      res.status(200).json({message : "User successfully saved"});
-    }
-  });
-
-}); 
-// router.post('/index/login', function(req, res, next) {
-//   console.log(req.body);
-
-//   User.find({username : req.body.username},function(err,user){
-//     if(err){
-
-//     }else if(user){
-//       // user.pass === req.body.pass
-//     }else{
-
-//     }
-//   })
-
-// }); 
-
-router.get('/land', function(req, res, next) {
-  res.render('partials/land', { title: 'Land' });
+router.get('/land_registration', function(req, res, next) {
+  res.render('partials/landRegistration', { title: 'Land' });
 });
       /// LAND REGISTRATION ///
-
-router.post('/index/land', function(req, res, next) {
-  console.log(req.body);
-
-  var newLand = new Land(req.body);
-
-  //Create land info
-  newLand.save(function(err,land){
-    if(err){
-      res.status(400).json(err);
-    }else{
-      res.status(200).json({message : "Land successfully registered"});
-    }
-  });
-
-}); 
 
 
 router.get('/login', function(req, res, next) {

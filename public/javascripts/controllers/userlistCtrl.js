@@ -8,14 +8,23 @@
 	*/
 	angular.module('App')
 	.controller('userlistCtrl', ['$scope',"serverRequestAddr","$http", function($scope, serverRequestAddr, $http){
-		$scope.getUserList = function(){
-
+		$scope.getUserList = function(user){
+			console.log(user);
+			// for(var a in user){
+			// 	if(!user[a]){
+			// 		delete user[a];
+			// 	}
+			// }
 			$http({
 				"method" : "POST",
-				"url" : serverRequestAddr.devServerAdd + "/user_list"
+				"url" : "/user_list",
+				"data" : {
+					"findQuery" : user
+				}
 			}).then(function(response){
 				console.log(response);
-				$scope.userList = response.data;
+				$scope.userList = response.data.userList;
+
 			}, function(errorResponse){
 				console.log(errorResponse);
 			});

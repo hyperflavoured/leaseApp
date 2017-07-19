@@ -1,43 +1,44 @@
-//- head
-//- 	style.
-//- 	  table {
-//- 	  font-family: arial, sans-serif;
-//- 	  border-collapse: collapse;
-//- 	  width: 100%;
-//- 	  }
-//- 	  td, th {
-//- 	  border: 1px solid #dddddd;
-//- 	  text-align: left;
-//- 	  padding: 8px;
-//- 	  }
-//- 	  tr:nth-child(even) {
-//- 	  background-color: #dddddd;
-//- 	  }
+.container
+	.row
+		//- .col-md-2
+		.col-md-8
+			h1 Land List
+			table.table-striped
+				thead
+					tr
+						th Upazilla
+						th  Area
+						th Postal Code
+						th Jol-mohor
+						th Balu-mohor
+						//- th Chingri-mohor
+						//- th Hat-Bazar
+					tr
+						th
+							input(type="text", ng-model="land.upazilla", ng-keyup="getLandList(land)")
+						th
+							input(type="text", ng-model="land.area", ng-keyup="getLandList(land)")
+						th
+							input(type="text", ng-model="land.postalcode", ng-keyup="getLandList(land)")
+						th
+							input(type="text", ng-model="land.jolmohor", ng-keyup="getLandList(land)")
+						th
+							input(type="text", ng-model="land.balumohor", ng-keyup="getLandList(land)")
+						//- th
+						//- 	input(type="text", ng-model="land.chingrimohor", ng-keyup="getLandList(land)")
+						//- th
+						//- 	input(type="text", ng-model="land.hatbazar", ng-keyup="getLandList(land)")
+				tbody
+					tr(ng-repeat = "land in landList")
+						td(ng-bind="land.upazilla")
+						td(ng-bind="land.area")
+						td(ng-bind="land.postalcode")
+						td(ng-bind="land.jolmohor")
+						td(ng-bind="land.balumohor")
+						//- td(ng-bind="land.chingrimohor")
+						//- td(ng-bind="land.hatbazar")
 
-
-table.center
-	thead
-		tr
-			th Upazilla
-			th  Area
-			th Postal Code
-			th Jol-mohor
-			th Balu-mohor
-			th Chingri-mohor
-			th Hat-Bazar
-	tbody
-		tr(ng-repeat = "land in landList")
-			td {{land.upazilla}}
-			td {{land.area}}
-			td {{land.postalcode}}
-			td {{land.jolmohor}}
-			td {{land.balumohor}}
-			td {{land.chingrimohor}}
-			td {{land.hatbazar}}
-
-			td 
-				button(ng-click="landDelete(land._id)") Delete
-				button(ng-click="landDelete(land._id)") Edit
-
-
-	
+				//- 		td 
+				//- 			button(ng-click="landDelete(land._id)") Delete
+				//- 			button(ng-click="landDelete(land._id)") Edit
+	//- .col-md-2	
