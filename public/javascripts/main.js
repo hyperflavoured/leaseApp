@@ -175,6 +175,19 @@
 				}]
 			}
         })
+
+        .when('/admin', {
+			templateUrl: serverRequestAddr.devServerAdd + '/admin', // sends request to server for html page
+			controller: 'adminCtrl',
+			resolve: {
+				loadAsset: ['$ocLazyLoad', function($ocLazyLoad) {
+					return $ocLazyLoad.load({
+						files : [
+						serverRequestAddr.devServerAdd + '/javascripts/controllers/adminCtrl.js',
+						]})
+				}]
+			}
+        })
 		.otherwise('/');
    	$locationProvider.hashPrefix('');
  	}])

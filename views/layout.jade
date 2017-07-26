@@ -1,5 +1,5 @@
 doctype html
-html.boxed(lang='en',ng-app='App')
+html(lang='en',ng-app='App')
   head
     // Basic
     meta(charset='utf-8')
@@ -47,26 +47,20 @@ html.boxed(lang='en',ng-app='App')
               .header-column
                 .header-logo
                   a(href='index.html')
-                    img(alt='', height='100',width='160',data-sticky-width='60', data-sticky-height='80', data-sticky-top='50', src='img/bdlogo.jpg')
+                    img(alt='', height='100',width='160',data-sticky-width='60', data-sticky-height='80', data-sticky-top='50', src='img/logo11.png')
               .header-column
-                .header-row
-                  .header-search.hidden-xs
-                    form#searchForm(action='page-search-results.html', method='get')
-                      .input-group
-                        input#q.form-control(type='text', name='q', placeholder='Search...', required='')
-                        span.input-group-btn
-                          button.btn.btn-default(type='submit')
-                            i.fa.fa-search
-                          button
+                
+                  
+                          
                   
                 .header-row
                   .header-nav
-                    button.btn.header-btn-collapse-nav(data-toggle='collapse', data-target='.header-nav-main')
+                    //button.btn.header-btn-collapse-nav(data-toggle='collapse', data-target='.header-nav-main')
                       i.fa.fa-bars
-                    ul.header-social-icons.social-icons.hidden-xs
+                    //ul.header-social-icons.social-icons.hidden-xs
                       li.social-icons-facebook
                         a(href='http://www.facebook.com/', target='_blank', title='Facebook')
-                          i.fa.fa-facebook
+                         //i.fa.fa-facebook
                       
                     .header-nav-main.header-nav-main-effect-1.header-nav-main-sub-effect-1.collapse
                       nav
@@ -97,8 +91,11 @@ html.boxed(lang='en',ng-app='App')
                           li
                             a.toggle(href='#/login')
                               | Log in
+                          //- li
+                          //-   a.toggle(href='#/user_list')
+                          //-     | User List
                           li
-                            a.toggle(href='#/user_list')
+                            a.toggle(href='#/admin')
                               | Admin Panel
                           //- li
                           //-   a.toggle(href='#/user_list')
@@ -108,9 +105,7 @@ html.boxed(lang='en',ng-app='App')
 
       footer#footer
         .container
-          .row
-            .footer-ribbon
-              span Get in Touch
+          
             .col-md-3
               .newsletter
                 h4 Newsletter

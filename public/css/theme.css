@@ -2910,7 +2910,7 @@ html.ie .home-concept .project-image {
 }
 
 html.dark .text-muted {
-	color: #00b33c !important;
+	color: #505461 !important;
 }
 
 .text-dark {
@@ -3735,7 +3735,7 @@ html.dark .text-muted {
 }
 /* Dark Version */
 html.dark body {
-	background-color: #00cccc;
+	background-color: #1d2127;
 }
 
 html.dark.boxed .body {
@@ -3752,7 +3752,7 @@ html.dark #header .header-search .form-control {
 }
 
 html.dark #header .header-body {
-	background: #e60000;
+	background: #1d2127;
 	border-top-color: #2e353e;
 }
 

@@ -26,6 +26,11 @@ router.get('/lease', function(req, res, next) {
   res.render('partials/lease', { title: 'Lease' });
 });
 
+
+router.get('/admin', function(req, res, next) {
+  res.render('partials/admin', { title: 'Admin' });
+});
+
 router.get('/find_land_page', function(req, res, next) {
   console.log("lsdkjflsdjsdflajalfsjlfsdk");
   res.render('partials/find_land', { title: 'Find Land' });

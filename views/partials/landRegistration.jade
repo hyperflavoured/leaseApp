@@ -17,11 +17,11 @@
                 label Area
                 input.form-control(ng-model="landreg.area",name='area',type='text')
 
-          .row
-            .form-group
-              .col-md-6
-                label Postal Code
-                input.form-control(ng-model="landreg.postalcode",name='postalcode',type='text')                 
+          //- .row
+          //-   .form-group
+          //-     .col-md-6
+          //-       label Postal Code
+          //-       input.form-control(ng-model="landreg.postalcode",name='postalcode',type='text')                 
           .row
             .form-group
               .col-md-3
@@ -36,7 +36,11 @@
               .col-md-3
                 label Hatbazar
                 input.form-control(ng-model="landreg.hatbazar",name='hatbazar',type='text')
+
+          
           .row
             .col-md-12
               input.btn.btn-primary.pull-right.mb-xl(type='submit', ng-click='formSubmit(landreg)', value="Register Land")
+
+
   .col-md-2

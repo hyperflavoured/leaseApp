@@ -1,0 +1,67 @@
+ 
+.main(role='main')
+  section.page-header
+    .container      
+      .row
+        .col-md-12
+          ul.breadcrumb
+            li
+              a(href='#') Home
+            li.active Pages
+      .row
+        .col-md-12
+          h1 Left Sidebar
+    .container
+      .row
+        .col-md-3
+          aside.sidebar
+            h4.heading-primary Categories
+              ul.nav.nav-list.mb-xlg
+                li
+                  a(href='#/user_list') User List
+                li.active
+                  a(href='#/find_land') Land details
+                  
+                li
+                  a(href='#') Information
+                li
+                  a(href='#') Profile
+                
+
+        .col-md-9
+            .row
+              .col-md-12
+                section.panel.panel-admin
+                  header.panel-heading
+                    .panel-actions
+                      a.panel-action.panel-action-toggle(href='#', data-panel-toggle='')
+                      a.panel-action.panel-action-dismiss(href='#', data-panel-dismiss='')
+                    h2.panel-title Default
+                  .panel-body
+                    .row
+                      .col-sm-6
+                        .mb-md
+                          button#addToTable.btn.btn-primary
+                            | Add 
+                            i.fa.fa-plus
+                    table#datatable-editable.table.table-bordered.table-striped.mb-none
+                      thead
+                        tr
+                          th Upazilla
+                          th  Thana
+                          th Postal Code
+                          th Jol-mohor
+                          th Balu-mohor
+                          th Chingri-mohor
+                          th Hat-bazar
+                          
+                        
+                      tbody
+                        tr(ng-repeat = "land in landList")
+                          td(ng-bind="land.upazilla")
+                          td(ng-bind="land.area")
+                          td(ng-bind="land.postalcode")
+                          td(ng-bind="land.jolmohor")
+                          td(ng-bind="land.balumohor")
+                          td(ng-bind="land.chingrimohor")
+                          td(ng-bind="land.hatbazar")
