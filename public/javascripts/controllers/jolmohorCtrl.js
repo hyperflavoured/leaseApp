@@ -7,14 +7,14 @@
 	* Description
 	*/
 	angular.module('App')
-	.controller('landRegistrationCtrl', ['$scope','$http', function($scope,$http){
+	.controller('jolmohorRegistrationCtrl', ['$scope','$http', function($scope,$http){
 		//$scope.passMatch = true;
 		$scope.formSubmit = function(landreg){
 			console.log(landreg);
 			
 			 	$http({
 				  method: 'POST',
-				  url: '/land_register',
+				  url: '/jolmohor_register',
 				  data : landreg
 				}).then(function successCallback(response) {
 				  	console.log(response);
@@ -23,7 +23,7 @@
 			    });
 			
 			
-		}; // $scope.formSubmit() ends here
+		}
 
 		
 

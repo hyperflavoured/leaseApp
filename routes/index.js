@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var jolmohorModel = require("../models/jolmohorModel");
 
 
 /* GET home page. */
@@ -44,13 +45,19 @@ router.get('/register', function(req, res, next) {
   // console.log("flsjklskjsd");
   res.render('partials/register', { title: 'Register' });
 });
-
+  
+ 
 
 
 router.get('/land_registration', function(req, res, next) {
   res.render('partials/landRegistration', { title: 'Land' });
 });
-      /// LAND REGISTRATION ///
+
+router.get('/land_details', function(req, res, next) {
+  res.render('partials/landDetails', { title: 'Land Details' });
+});
+
+
 
 
 router.get('/login', function(req, res, next) {

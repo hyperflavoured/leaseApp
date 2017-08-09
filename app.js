@@ -13,8 +13,7 @@ var add = require('./routes/add');
 var land = require("./routes/land");
 var user = require("./routes/user");
 var login = require("./routes/login");
-
-
+//var jolmohor = require("./routes/jolmohor");
 
 var app = express();
 
@@ -50,6 +49,8 @@ app.use('/view', views);
 app.use("/", land);
 app.use("/", user);
 app.use("/", login);
+//app.use("/", jolmohor);
+
 
 
 

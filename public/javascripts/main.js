@@ -1,4 +1,4 @@
-(function() {
+	(function() {
 	'use strict';
 	/**
 	* MEAN Module
@@ -73,30 +73,8 @@
 				}]
 			}
         })
-        .when('/e_tender', {
-			templateUrl: serverRequestAddr.devServerAdd + '/e_tender', // sends request to server for html page
-			controller: 'eTenderCtrl',
-			resolve: {
-				loadAsset: ['$ocLazyLoad', function($ocLazyLoad) {
-					return $ocLazyLoad.load({
-						files : [
-						serverRequestAddr.devServerAdd + '/javascripts/controllers/eTenderCtrl.js',
-						]})
-				}]
-			}
-        })
-        .when('/lease', {
-			templateUrl: serverRequestAddr.devServerAdd + '/lease', // sends request to server for html page
-			controller: 'leaseCtrl',
-			resolve: {
-				loadAsset: ['$ocLazyLoad', function($ocLazyLoad) {
-					return $ocLazyLoad.load({
-						files : [
-						serverRequestAddr.devServerAdd + '/javascripts/controllers/leaseCtrl.js',
-						]})
-				}]
-			}
-        })
+        
+        
         .when('/find_land', {
 			templateUrl: serverRequestAddr.devServerAdd + '/find_land_page', // sends request to server for html page
 			controller: 'findLandCtrl',
@@ -135,18 +113,6 @@
 			}
         })
 
-        .when('/land_registration', {
-			templateUrl: serverRequestAddr.devServerAdd + '/land_registration', // sends request to server for html page
-			controller: 'landRegistrationCtrl',
-			resolve: {
-				loadAsset: ['$ocLazyLoad', function($ocLazyLoad) {
-					return $ocLazyLoad.load({
-						files : [
-						serverRequestAddr.devServerAdd + '/javascripts/controllers/landCtrl.js',
-						]})
-				}]
-			}
-        })
 
         .when('/login', {
 			templateUrl: serverRequestAddr.devServerAdd + '/login', // sends request to server for html page
@@ -188,6 +154,34 @@
 				}]
 			}
         })
+
+        .when('/land_registration', {
+			templateUrl: serverRequestAddr.devServerAdd + '/land_registration', // sends request to server for html page
+			controller: 'landRegistrationCtrl',
+			resolve: {
+				loadAsset: ['$ocLazyLoad', function($ocLazyLoad) {
+					return $ocLazyLoad.load({
+						files : [
+						serverRequestAddr.devServerAdd + '/javascripts/controllers/landCtrl.js',
+						]})
+				}]
+			}
+        })
+        .when('/land_details/:id', {
+			templateUrl: serverRequestAddr.devServerAdd + '/land_details', // sends request to server for html page
+			controller: 'landDetailsCtrl',
+			resolve: {
+				loadAsset: ['$ocLazyLoad', function($ocLazyLoad) {
+					return $ocLazyLoad.load({
+						files : [
+						serverRequestAddr.devServerAdd + '/javascripts/controllers/landDetailsCtrl.js',
+						]})
+				}]
+			}
+        })
+
+
+       
 		.otherwise('/');
    	$locationProvider.hashPrefix('');
  	}])

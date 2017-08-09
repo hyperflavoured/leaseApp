@@ -1,0 +1,48 @@
+.container
+	.row
+		//- .col-md-2
+		.col-md-6
+			h1 Land List
+			table#datatable-editable.table.table-bordered.table-striped.mb-none
+				thead
+					tr
+						th Upazilla
+						th  Thana
+						
+						th Jol-mohor
+						th Balu-mohor
+						th Chingri-mohor
+						th Hat-bazar
+						
+					tr
+						th
+							input(type="text", ng-model="jolmohor.jolmohorname", ng-keyup="getJolmohorList(jolmohor)")
+						th
+							input(type="text", ng-model="jolmohor.id", ng-keyup="getJolmohorList(jolmohor)")
+						
+						th
+							input(type="text", ng-model="jolmohor.ownername", ng-keyup="getJolmohorList(jolmohor)")
+						//- th
+						//- 	input(type="text", ng-model="jolmohor.landsize", ng-keyup="getJolmohorList(land)")
+						//- //- th
+						//- 	input(type="text", ng-model="land.chingrimohor", ng-keyup="getJolmohorList(land)")
+						//- th
+						//- 	input(type="text", ng-model="land.hatbazar", ng-keyup="getJolmohorList(land)")
+						//- th
+						//- 	input(type="text", ng-model="land.chingrimohor", ng-keyup="getJolmohorList(land)")
+						//- th
+						//- 	input(type="text", ng-model="land.hatbazar", ng-keyup="getJolmohorList(land)")
+				tbody
+					tr(ng-repeat = "jolmohor in jolmohorList")
+						td(ng-bind="jolmohor.jolmohorname")
+						td(ng-bind="jolmohor.id")
+						
+						td(ng-bind="jolmohor.ownername")
+						//- td(ng-bind="land.balumohor")
+						//- td(ng-bind="land.chingrimohor")
+						//- td(ng-bind="land.hatbazar")
+
+	//- 					td 
+	//- 						button.btn-danger.pull-right.mb-xl(ng-click="landDelete(land._id)") Del
+	//- 						button.btn-primary.pull-right.mb-xl(ng-click="landEdit(land._id)") Edit
+	//- //- .col-md-2	

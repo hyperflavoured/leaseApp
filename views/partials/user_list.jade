@@ -1,30 +1,72 @@
+ 
+.main(role='main')
+  section.page-header
+    .container      
+      
+      .row
+        .col-md-12
+          h1 Admin Panel
+    .container
+      .row
+        .col-md-3
+          aside.sidebar
+            h4.heading-primary Categories
+              ul.nav.nav-list.mb-xlg
+                li
+                  a(href='#/user_list') User List
+                li.active
+                  a(href='#/find_land') Land details
+                  
+                li
+                  a(href='#/land_registration') Land Registration
+                
+
+                li
+                  a(href='#/admin') Home
+                
+                
+
+        .col-md-9
+            //- .row
+            //-   .col-md-6
+            //-     th
+            //-                 input(size="10",type="text", ng-model="user.phoneNumber", ng-keyup="getUserList(user)")
+            //-   .col-md-6
+            //-     th
+            //-                 input(size="10",type="text", ng-model="user.nid", ng-keyup="getUserList(user)")
+                     
+
+            .row
+              .col-md-12
+                    
+                    table#datatable-editable.table.table-bordered.table-striped.mb-none
+                      thead
+                        
+
+                        tr
+                          th Username
+                          th Email
+                          th Contact Number
+                          th NID
+                        tr
+                          th
+                            input(size="10",type="text", ng-model="user.username", ng-keyup="getUserList(user)")
+                          th
+                            input(size="10",type="text", ng-model="user.email", ng-keyup="getUserList(user)")
+                          th
+                            input(size="10",type="text", ng-model="user.phoneNumber", ng-keyup="getUserList(user)")
+                          th
+                            input(size="10",type="text", ng-model="user.nid", ng-keyup="getUserList(user)")
+                            
+                      tbody
+                        tr(ng-repeat = "user in userList")
+                          td(ng-bind="user.username")
+                          td(ng-bind="user.email")
+                          td(ng-bind="user.phoneNumber")
+                          td(ng-bind="user.nid")
+                          
 
 
-.container
-	.row
-		.col-md-2
-		.col-md-8
-			h1 User List
-			table.table-striped
-				thead
-					tr
-						th Username
-						th Email
-						th Contact Number
-						th NID
-					tr
-						th
-							input(type="text", ng-model="user.username", ng-keyup="getUserList(user)")
-						th
-							input(type="text", ng-model="user.email", ng-keyup="getUserList(user)")
-						th
-							input(type="text", ng-model="user.phoneNumber", ng-keyup="getUserList(user)")
-						th
-							input(type="text", ng-model="user.nid", ng-keyup="getUserList(user)")
-				tbody
-					tr(ng-repeat = "user in userList")
-						td(ng-bind="user.username")
-						td(ng-bind="user.email")
-						td(ng-bind="user.phoneNumber")
-						td(ng-bind="user.nid")
-		.col-md-2
+                          td 
+                            
+                            button.btn-danger.pull-right.mb-xl(ng-click="userDelete(user._id)") Delete

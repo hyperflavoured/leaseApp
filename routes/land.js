@@ -4,18 +4,26 @@ var landModel = require("../models/landModel");
 
 router.post("/land_register", function(req, res, next){
 	console.log(req.body);
+	req.body.purchaseDate = new Date(req.body.purchaseDate);
+	req.body.caseDate = new Date(req.body.caseDate);
 	var newLand = new landModel(req.body);
-	newLand.save(function(error, doc){
-		if(error){
+	var error = newLand.validateSync();
+	if(error){
+		console.log("error found in validateSync");
+	}else{
 
-		}else if(doc){
-			res.status(200).json({
-				"message" : "Successfully added the land."
-			});
-		}else{
+		newLand.save(function(errorSave, doc){
+			if(errorSave){
 
-		}
-	});
+			}else if(doc){
+				res.status(200).json({
+					"message" : "Successfully added the land."
+				});
+			}else{
+
+			}
+		});
+	}
 });
 
 router.post("/land_list", function(req, res, next){

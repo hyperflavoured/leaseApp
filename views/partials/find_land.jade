@@ -1,49 +1,54 @@
+
+
 .container
 	.row
-		//- .col-md-2
-		.col-md-6
+		.col-md-12
 			h1 Land List
-			table#datatable-editable.table.table-bordered.table-striped.mb-none
+			table.table(border='5')
 				thead
+					col
 					tr
+						th(width="10%") Division
+						th District
+						
 						th Upazilla
-						th  Thana
-						th Postal Code
-						th Jol-mohor
-						th Balu-mohor
-						th Chingri-mohor
-						th Hat-bazar
+						th Thana
+						th Village
+						th LandType
+						th 
 						
 					tr
 						th
-							input(type="text", ng-model="land.upazilla", ng-keyup="getLandList(land)")
+							input(placeholder='Search...' ,size="10",type="text", ng-model="land.division", ng-keyup="getLandList(land)")
 						th
-							input(type="text", ng-model="land.area", ng-keyup="getLandList(land)")
+							input(placeholder='Search...' ,size="10",type="text", ng-model="land.district", ng-keyup="getLandList(land)")
+						
 						th
-							input(type="text", ng-model="land.postalcode", ng-keyup="getLandList(land)")
+							input(placeholder='Search...' ,size="10",type="text", ng-model="land.upazilla", ng-keyup="getLandList(land)")
 						th
-							input(type="text", ng-model="land.jolmohor", ng-keyup="getLandList(land)")
+							input(placeholder='Search...' ,size="10",type="text", ng-model="land.thana", ng-keyup="getLandList(land)")
 						th
-							input(type="text", ng-model="land.balumohor", ng-keyup="getLandList(land)")
+							input(placeholder='Search...' ,size="10",type="text", ng-model="land.village", ng-keyup="getLandList(land)")
 						th
-							input(type="text", ng-model="land.chingrimohor", ng-keyup="getLandList(land)")
+							input(placeholder='Search...' ,size="10",type="text", ng-model="land.landType", ng-keyup="getLandList(land)")
 						th
-							input(type="text", ng-model="land.hatbazar", ng-keyup="getLandList(land)")
-						th
-							input(type="text", ng-model="land.chingrimohor", ng-keyup="getLandList(land)")
-						th
-							input(type="text", ng-model="land.hatbazar", ng-keyup="getLandList(land)")
+							d(size="10",ng-model="land.landType", ng-keyup="getLandList(land)")
+						
+						
 				tbody
 					tr(ng-repeat = "land in landList")
+						td(ng-bind="land.division")
+						td(ng-bind="land.district")
+						
 						td(ng-bind="land.upazilla")
-						td(ng-bind="land.area")
-						td(ng-bind="land.postalcode")
-						td(ng-bind="land.jolmohor")
-						td(ng-bind="land.balumohor")
-						td(ng-bind="land.chingrimohor")
-						td(ng-bind="land.hatbazar")
+						td(ng-bind="land.thana")
+						td(ng-bind="land.village")
+						td(ng-bind="land.landType")
 
-	//- 					td 
-	//- 						button.btn-danger.pull-right.mb-xl(ng-click="landDelete(land._id)") Del
-	//- 						button.btn-primary.pull-right.mb-xl(ng-click="landEdit(land._id)") Edit
-	//- //- .col-md-2	
+
+						td 
+							a.btn-success(href="#/land_details/{{land._id}}") Details
+							button.btn-danger.pull-right.mb-xl(ng-click="landDelete(land._id)") Delete
+
+	.row
+		a.btn.btn-info(href='#/admin', role='button') BACK
