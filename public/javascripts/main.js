@@ -184,5 +184,13 @@
        
 		.otherwise('/');
    	$locationProvider.hashPrefix('');
- 	}])
+ 	}]).run(["$rootScope", "$window", function($rootScope, $window){
+ 		$rootScope.userInfo = JSON.parse($window.localStorage.getItem("userInfo"));
+ 		$rootScope.loggedIn = $window.localStorage.getItem("loggedIn");
+ 		$rootScope.logOut = function(){
+ 			$window.localStorage.clear();
+ 			$window.location.href = "#/";
+ 			$window.location.reload();
+ 		};
+ 	}]);
 })();

@@ -1,23 +1,24 @@
 var express = require('express');
 var router = express.Router();
 var User = require("../models/userModel");
-
+var bcrypt = require("bcryptjs");
 
 /*=====================================================================================
 =            Router to store user registration information in the database            =
 =====================================================================================*/
 
 router.post('/user_register', function(req, res, next) {
-  console.log(req.body);
-
+  req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10));
   var newUser = new User(req.body);
-
   //Create user
   newUser.save(function(err,user){
     if(err){
       res.status(400).json(err);
+      console.log("error");
     }else{
       res.status(200).json({message : "User successfully saved"});
+      console.log("user saved");
+      console.log(user);
     }
   });
 

@@ -17,6 +17,14 @@
                   .row
                     .form-group
                       .col-md-12
+                        label User Type
+                        select.form-control(ng-model="reg.userType", name='userType')
+                          option(value="", selected, disabled) Select User Type
+                          option(value="admin") Administrator
+                          option(value="general") General
+                  .row
+                    .form-group
+                      .col-md-12
                         label E-mail Address
                         input.form-control(ng-model="reg.email",name='email',type='text') 
                   .row
