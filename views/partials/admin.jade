@@ -6,44 +6,58 @@
         .col-md-12
           ul.breadcrumb
             li
-              a(href='#') Home
-            li.active Pages
+              
       .row
         .col-md-12
           h1 Admin Panel
     .container
       .row
         .col-md-3
-          aside.sidebar
-            h4.heading-primary Categories
-              ul.nav.nav-list.mb-xlg
-                li
-                  a(href='#/user_list') User List
-                li.active
-                  a(href='#/find_land') Land details
-                  
-                li
-                  a(href='#/land_registration') Land Registration
-                
-
-                li
-                  a(href='#/admin') Home
-                
-
-        //- .col-md-9
-        //-     .row
-        //-       .col-md-12
-        //-         section.panel.panel-admin
-        //-           header.panel-heading
-        //-             .panel-actions
-        //-               a.panel-action.panel-action-toggle(href='#', data-panel-toggle='')
-        //-               a.panel-action.panel-action-dismiss(href='#', data-panel-dismiss='')
-        //-             h2.panel-title Default
-        //-           .panel-body
-        //-             .row
-        //-               .col-sm-6
-        //-                 .mb-md
-        //-                   button#addToTable.btn.btn-primary
-        //-                     | Add 
-        //-                     i.fa.fa-plus
+          aside#sidebar-left.sidebar-left
+            .sidebar-header
+              .sidebar-title
+                br
+            
+            .nano
+              .nano-content
+                nav#menu.nav-main(role='navigation')
+                  ul.nav.nav-main
                     
+                        li
+                          a(href='#/user_list')
+                            | User List
+                        li
+                          a(href='#/find_land')
+                            | Land Information
+                        li.nav-active
+                          a(href='#/land_registration')
+                            | Land Registration
+                        li
+                          a(href='#/register')
+                            | User Registration
+        .col-md-9
+            //- .row
+            //-   .col-md-6
+            //-     th
+            //-                 input(size="10",type="text", ng-model="user.phoneNumber", ng-keyup="getUserList(user)")
+            //-   .col-md-6
+            //-     th
+            //-                 input(size="10",type="text", ng-model="user.nid", ng-keyup="getUserList(user)")
+                     
+
+            .row
+              .col-md-12
+
+                                
+                            
+                    
+              script.
+                // Maintain Scroll Position
+                if (typeof localStorage !== 'undefined') {
+                if (localStorage.getItem('sidebar-left-position') !== null) {
+                var initialPosition = localStorage.getItem('sidebar-left-position'),
+                sidebarLeft = document.querySelector('#sidebar-left .nano-content');
+                sidebarLeft.scrollTop = initialPosition;
+                }
+                }
+          // end: sidebar

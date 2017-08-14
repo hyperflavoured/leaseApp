@@ -3,7 +3,8 @@
 .container
 	.row
 		.col-md-12
-			h1 Land List
+			
+			h1(style='color:#71da71;') Land List
 			table.table(border='5')
 				thead
 					col
@@ -47,8 +48,11 @@
 
 
 						td 
-							a.btn-success(href="#/land_details/{{land._id}}") Details
-							button.btn-danger.pull-right.mb-xl(ng-click="landDelete(land._id)") Delete
+							a.btn.btn-danger.pull-right.mb-xl(ng-click="landDelete(land._id)") Delete
+							a.btn.btn-success.pull-left.mb-xl(href="#/land_details/{{land._id}}") Details
+							a.btn.btn-info.pull.mb-xl(href="#/land_details/{{land._id}}") Edit
 
-	.row
-		a.btn.btn-info(href='#/admin', role='button') BACK
+	
+		.col-sm-1.col-sm-offset-11
+			button.btn.btn-basic BACK
+

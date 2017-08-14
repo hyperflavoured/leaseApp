@@ -9,20 +9,28 @@
     .container
       .row
         .col-md-3
-          aside.sidebar
-            h4.heading-primary Categories
-              ul.nav.nav-list.mb-xlg
-                li
-                  a(href='#/user_list') User List
-                li.active
-                  a(href='#/find_land') Land details
-                  
-                li
-                  a(href='#/land_registration') Land Registration
-                
-
-                li
-                  a(href='#/admin') Home
+          aside#sidebar-left.sidebar-left
+            .sidebar-header
+              .sidebar-title
+                br
+            
+            .nano
+              .nano-content
+                nav#menu.nav-main(role='navigation')
+                  ul.nav.nav-main
+                    
+                        li
+                          a(href='#/user_list')
+                            | User List
+                        li
+                          a(href='#/find_land')
+                            | Land Information
+                        li.nav-active
+                          a(href='#/land_registration')
+                            | Land Registration
+                        li
+                          a(href='#/register')
+                            | User Registration
                 
                 
 
@@ -69,4 +77,6 @@
 
                           td 
                             
-                            button.btn-danger.pull-right.mb-xl(ng-click="userDelete(user._id)") Delete
+                            a.btn.btn-danger.pull-right.mb-xl(ng-click="userDelete(user._id)") Delete
+
+                            a.btn.btn-info.pull-left.mb-xl(href='https://www2.bulksms.com/home/compose/', role='button') SMS

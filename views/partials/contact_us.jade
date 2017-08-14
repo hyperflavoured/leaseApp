@@ -1,61 +1,74 @@
 .main(role='main')
-  //.jumbotron.jumbotron-sm
-    //- .container
-    //-   .row
-    //-     .col-sm-12.col-lg-12
-    //-       h1.h1
-    //-         | Contact us 
-    //-         small State your queries here
+  section.section.section-text-light.section-default.section-default-scale-8
+        .col-md-10.col-md-offset-1
+          .row.mt-lg.align-left
+            .col-md-5.mb-lg
+              h4.mt-md.mb-none Dhaka
+              ul.list.list-icons.mt-xlg
+                li
+                  i.fa.fa-map-marker
+                  strong Address:
+                  |  Block D, Bashundhara Residential, Dhaka, Bangladesh
+                li
+                  i.fa.fa-phone
+                  strong Phone:
+                  |  (+880) 456-789-1748
+                li
+                  i.fa.fa-envelope
+                  strong Email:
+                  a(href='mailto:mail@example.com') mail@example.com
+            .col-md-5.col-md-offset-2.mb-lg
+              h4.mt-md.mb-none Chittagong
+              ul.list.list-icons.mt-xlg
+                li
+                  i.fa.fa-map-marker
+                  strong Address:
+                  |  Mohammadia Housing, Mohammadpur, Dhaka, Bangladesh
+                li
+                  i.fa.fa-phone
+                  strong Phone:
+                  |  (+880) 456-788-3467
+                li
+                  i.fa.fa-envelope
+                  strong Email:
+                  a(href='mailto:mail@example.com') mail@example.com
+        .row.mt-lg
+          .col-md-10.col-md-offset-1.center
+            .divider.divider-primary.divider-small.divider-small-center.mb-xl
+              hr
+            h2.mb-none.mt-xl.font-weight-semibold Send us a Message.
+            p.lead.mb-none Please fill out the quick form and we will be in touch with lightening speed
+            .divider.divider-style-4.divider-primary.divider-top-section-custom.taller
+              i.fa.fa-chevron-down
   .container
-    .row
-      .col-md-8
-        .well.well-sm
-          form
-            .row
-              .col-md-6
-                .form-group
-                  label(for='name')
-                    | Name
-                  input#name.form-control(type='text', placeholder='Enter name', required='required')
-                .form-group
-                  label(for='email')
-                    | Email Address
-                  .input-group
-                    span.input-group-addon
-                      span.glyphicon.glyphicon-envelope
-                    input#email.form-control(type='email', placeholder='Enter email', required='required')
-                .form-group
-                  label(for='subject')
-                    | Subject
-                  select#subject.form-control(name='subject', required='required')
-                    option(value='na', selected='') Choose One:
-                    option(value='service') General Customer Service
-                    option(value='suggestions') Suggestions
-                    option(value='product') Product Support
-              .col-md-6
-                .form-group
-                  label(for='name')
-                    | Message
-                  textarea#message.form-control(name='message', rows='9', cols='25', required='required', placeholder='Message')
+    .row.mt-xl
+      .col-md-10.col-md-offset-1
+        #contactSuccess.alert.alert-success.hidden.mt-lg
+          strong Success!
+          |  Your message has been sent to us.
+        #contactError.alert.alert-danger.hidden.mt-lg
+          strong Error!
+          |  There was an error sending your message.
+          span#mailErrorMessage.font-size-xs.mt-sm.display-block
+        form#contactForm(action='php/contact-form.php', method='POST')
+          .row
+            .form-group
               .col-md-12
-                button#btnContactUs.btn.btn-primary.pull-right(type='submit')
-                  | Send Message
-      .col-md-4
-        form
-          legend
-            span.glyphicon.glyphicon-globe
-            |  Our office
-          address
-            strong Twitter, Inc.
-            br
-            |                 795 Folsom Ave, Suite 600
-            br
-            |                 San Francisco, CA 94107
-            br
-            abbr(title='Phone')
-              | P:
-            |                 (123) 456-7890
-          address
-            strong Full Name
-            br
-            a(href='mailto:#') first.last@example.com
+                input#name.form-control.input-lg(type='text', placeholder='Your Name', value='', data-msg-required='Please enter your name.', maxlength='100', name='name', required='')
+          .row
+            .form-group
+              .col-md-12
+                input#email.form-control.input-lg(type='email', placeholder='Your E-mail', value='', data-msg-required='Please enter your email address.', data-msg-email='Please enter a valid email address.', maxlength='100', name='email', required='')
+          .row
+            .form-group
+              .col-md-12
+                input#subject.form-control.input-lg(type='text', placeholder='Subject', value='', data-msg-required='Please enter the subject.', maxlength='100', name='subject', required='')
+          .row
+            .form-group
+              .col-md-12
+                textarea#message.form-control.input-lg(maxlength='5000', placeholder='Message', data-msg-required='Please enter your message.', rows='10', name='message', required='')
+          .row
+            .col-md-12
+              input.btn.btn-primary.btn-lg.mb-xs(type='submit', value='Send Message', data-loading-text='Loading...')
+  // Google Maps - Go to the bottom of the page to change settings and map location.
+  #googlemaps.google-map

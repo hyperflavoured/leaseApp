@@ -34,20 +34,25 @@ html.dark(lang='en',ng-app='App')
     link(rel='stylesheet', href='vendor/rs-plugin/css/navigation.css')
     // Skin CSS
     link(rel='stylesheet', href='css/skins/skin-corporate-4.css')
+    link(rel='stylesheet', href='css/skins/skin-digital-agency.css')
+
     // Theme Custom CSS
     link(rel='stylesheet', href='css/custom.css')
     // Head Libs
     script(src='vendor/modernizr/modernizr.min.js')
+    script(src='dist/sweetalert.min.js')
+    link(rel='stylesheet', type='text/css', href='dist/sweetalert.css')
+
   body
     .body
-      header#header(data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyStartAt': 57, 'stickySetTop': '-57px', 'stickyChangeLogo': true}")
+      header#header(data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyStartAt': 50, 'stickySetTop': '-50px', 'stickyChangeLogo': true}")
         .header-body
           .header-container.container
             .header-row
               .header-column
                 .header-logo
                   a(href='index.html')
-                    img(alt='', height='100',width='160',data-sticky-width='60', data-sticky-height='80', data-sticky-top='50', src='img/logo11.png')
+                    img(alt='', height='100',width='160',data-sticky-width='60', data-sticky-height='80', data-sticky-top='50', src='img/logo17.png')
               .header-column
                 
                   
@@ -81,10 +86,7 @@ html.dark(lang='en',ng-app='App')
                           li
                             a.toggle(href='#/contact_us')
                               | Contact Us
-                          //- li
-                          //-   a.toggle(href='#/jolmohor_registration')
-                          //-     | jolmohor
-
+                         
 
                               
                           li
@@ -93,9 +95,7 @@ html.dark(lang='en',ng-app='App')
                           li(ng-if="userInfo.userType === 'admin'")
                             a.toggle(href='#/register')
                               | Register        
-                          //- li
-                          //-   a.toggle(href='#/user_list')
-                          //-     | User List
+                          
                           li(ng-if="userInfo.userType === 'admin'")
                             a.toggle(href='#/admin')
                               | Admin Panel
