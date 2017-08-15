@@ -96,6 +96,12 @@ html.dark(lang='en',ng-app='App')
                           //- li
                           //-   a.toggle(href='#/user_list')
                           //-     | User List
+                          li(ng-if="userInfo && userInfo.userType!='admin'")
+                            a.toggle(href='#/user_land/{{userInfo.nid}}')
+                              | My Lands
+                          li(ng-if="userInfo")
+                            a.toggle(href='#/user_update/{{userInfo._id}}')
+                              | My Account
                           li(ng-if="userInfo.userType === 'admin'")
                             a.toggle(href='#/admin')
                               | Admin Panel
@@ -104,6 +110,8 @@ html.dark(lang='en',ng-app='App')
                               | Log in
                           li(ng-if="loggedIn === 'true'")
                             a.btn.toggle(ng-click="logOut()") Log Out
+                          li(ng-if="userInfo")
+                            h2 Hello {{userInfo.username}}
                           //- li
                           //-   a.toggle(href='#/user_list')
                           //-     | Admin panel

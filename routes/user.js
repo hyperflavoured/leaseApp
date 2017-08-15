@@ -60,7 +60,7 @@ router.post("/user_list", function(req, res, next){
 =            Router to get user details            =
 ==================================================*/
 router.get("/user_details/:userId", function(req, res, next){
-	User.findById(req.params.userId)
+	User.findById(req.params.userId, {password : false})
 	.exec(function(error, doc){
 		if(error){
 
@@ -77,6 +77,27 @@ router.get("/user_details/:userId", function(req, res, next){
 
 
 /*=====  End of Router to get user details  ======*/
+
+
+/*=============================================
+=            Router to update user            =
+=============================================*/
+router.put("/user_update/:id", function(req, res, next){
+	User.findByIdAndUpdate(req.params.id, req.body, function(error, doc){
+		if(error){
+
+		}else if(doc){
+			res.status(200).json({
+				"data" : doc,
+				"message" : "user successfully updated"
+			});
+		}
+	});
+});
+
+
+/*=====  End of Router to update user  ======*/
+
 
 
 /*=========================================================

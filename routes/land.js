@@ -63,6 +63,19 @@ router.get("/land_details/:landId", function(req, res, next){
 });
 
 
+router.put("/land_update/:landId", function(req, res, next){
+	landModel.findByIdAndUpdate(req.params.landId, req.body, function(error, doc){
+		if(error){
+
+		}else if(doc){
+			res.status(200).json({
+				"data" : doc,
+				"message" : "land data updated successfully"
+			});
+		}
+	});
+});
+
 router.delete("/land_delete/:landId", function(req, res, next){
 	landModel.findByIdAndRemove(req.params.landId)
 	.exec(function(error, doc){

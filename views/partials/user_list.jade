@@ -68,5 +68,7 @@
 
 
                           td 
-                            
-                            button.btn-danger.pull-right.mb-xl(ng-click="userDelete(user._id)") Delete
+                              td
+                                button.btn-danger.pull-right.mb-xl(ng-click="userDelete(user._id)") Delete
+                              td
+                                a.btn-warning.pull-right.mb-xl(href="#/user_update/{{user._id}}") Edit Info

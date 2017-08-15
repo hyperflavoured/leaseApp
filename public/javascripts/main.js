@@ -87,6 +87,18 @@
 				}]
 			}
         })
+	    .when('/user_land/:nid', {
+			templateUrl: serverRequestAddr.devServerAdd + '/user_land_page', // sends request to server for html page
+			controller: 'userLandCtrl',
+			resolve: {
+				loadAsset: ['$ocLazyLoad', function($ocLazyLoad) {
+					return $ocLazyLoad.load({
+						files : [
+						serverRequestAddr.devServerAdd + '/javascripts/controllers/userLandCtrl.js',
+						]})
+				}]
+			}
+	    })
         .when('/contact_us', {
 			templateUrl: serverRequestAddr.devServerAdd + '/contact_us', // sends request to server for html page
 			controller: 'contactUsCtrl',
@@ -111,6 +123,18 @@
 						]})
 				}]
 			}
+        })
+        .when('/user_update/:id',{
+        	templateUrl: serverRequestAddr.devServerAdd + '/user_update_page', // sends request to server for html page
+        	controller: 'userUpdateCtrl',
+        	resolve: {
+        		loadAsset: ['$ocLazyLoad', function($ocLazyLoad) {
+        			return $ocLazyLoad.load({
+        				files : [
+        				serverRequestAddr.devServerAdd + '/javascripts/controllers/userUpdateCtrl.js',
+        				]})
+        		}]
+        	}
         })
 
 
@@ -167,6 +191,18 @@
 				}]
 			}
         })
+        .when('/land_update/:id', {
+			templateUrl: serverRequestAddr.devServerAdd + '/land_update_page', // sends request to server for html page
+			controller: 'landUpdateCtrl',
+			resolve: {
+				loadAsset: ['$ocLazyLoad', function($ocLazyLoad) {
+					return $ocLazyLoad.load({
+						files : [
+						serverRequestAddr.devServerAdd + '/javascripts/controllers/landUpdateCtrl.js',
+						]})
+				}]
+			}
+        })
         .when('/land_details/:id', {
 			templateUrl: serverRequestAddr.devServerAdd + '/land_details', // sends request to server for html page
 			controller: 'landDetailsCtrl',
@@ -189,7 +225,7 @@
  		$rootScope.loggedIn = $window.localStorage.getItem("loggedIn");
  		$rootScope.logOut = function(){
  			$window.localStorage.clear();
- 			$window.location.href = "#/";
+ 			$window.location.href = "#/login";
  			$window.location.reload();
  		};
  	}]);

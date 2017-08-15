@@ -3,7 +3,7 @@ var userModel = require("../models/userModel");
 var bcrypt = require("bcryptjs");
 
 router.post("/login", function(req, res, next){
-	console.log(req.body);
+	// console.log(req.body);
 	userModel.findOne({"$or" : [ {"username" : req.body.username}, {"email" : req.body.username} ]})
 	.exec(function(errorUser, docUser){
 		if(errorUser){

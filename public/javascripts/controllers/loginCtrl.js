@@ -22,6 +22,9 @@
 					if(response.data.userInfo.userType === "admin"){
 						$window.location.href = "#/admin";
 						$window.location.reload();
+					}else{
+						$window.location.href = "#/";
+						$window.location.reload();
 					}
 				}else{
 

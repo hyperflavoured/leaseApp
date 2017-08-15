@@ -1,0 +1,107 @@
+.container
+  .col-md-2
+  .col-sm-8
+    .featured-box.featured-box-primary.align-left.mt-xlg
+      .box-content
+        h4.heading-primary.text-uppercase.mb-md Edit Land Info
+        form#frmSignUp()
+          .row
+            .form-group
+              .col-md-12
+                label Division
+                select(ng-model="landreg.division")
+                  option(value="") Select Division
+                  option(value="dhaka") Dhaka
+                  option(value="chittagong") Chittagong
+                  option(value="rangpur") Rangpur
+                  option(value="sylhet") Sylhet
+                  option(value="barisal") Barisal
+                  option(value="khulna") Khulna
+                  option(value="rajshahi") Rajshahi
+                  option(value="mymensingh") Mymensingh
+                //- input.form-control(ng-model="landreg.division",name='division',type='text')
+          .row
+            .form-group
+              .col-md-12
+                label District
+                input.form-control(ng-model="landreg.district",name='district',type='text')
+          .row
+            .form-group
+              .col-md-12
+                label Upazilla
+                input.form-control(ng-model="landreg.upazilla",name='upazilla',type='text')
+          .row
+            .form-group
+              .col-md-12
+                label Thana
+                input.form-control(ng-model="landreg.thana",name='thana',type='text')
+          .row
+            .form-group
+              .col-md-12
+                label Village
+                input.form-control(ng-model="landreg.village",name='village',type='text')
+          .row
+            .form-group
+              .col-md-12
+                label Land Type
+                select.selectpicker(ng-model="landreg.landType")
+                  option(value="") Select Land Type
+                  option(value="haatbazar") Haat Bazar
+                  option(value="jolmohol") Jolmohol
+                  option(value="balumohol") Balumohol
+                  option(value="chingrimohol") ChingriMohol
+                  option(value="pathormohol") PathorMohol
+
+                //- input.form-control(ng-model="landreg.landType",name='landType',type='text')
+          .row
+            .form-group
+              .col-md-12
+                label Land Name
+                input.form-control(ng-model="landreg.landName",name='landName',type='text')
+          .row
+            .form-group
+              .col-md-12
+                label Land Size
+                input.form-control(ng-model="landreg.landSize",name='landSize',type='text')
+          .row
+            .form-group
+              .col-md-12
+                label Location
+                input.form-control(ng-model="landreg.location",name='location',type='text')
+          .row
+            .form-group
+              .col-md-12
+                label Purchase Date
+                input.form-control(ng-model="landreg.purchaseDate",name='purchaseDate',type='date')
+          .row
+            .form-group
+              .col-md-12
+                label Purchase Amount
+                input.form-control(ng-model="landreg.purchaseAmount",name='purchaseAmount',type='number')
+          .row
+            .form-group
+              .col-md-12
+                label Case Date
+                input.form-control(ng-model="landreg.caseDate",name='caseDate',type='date')
+          .row
+            .form-group
+              .col-md-12
+                label Case Details
+                input.form-control(ng-model="landreg.caseDetails",name='caseDetails',type='text')
+          .row
+            .form-group
+              .col-md-12
+                label Owner Name
+                input.form-control(ng-model="landreg.ownerName",name='ownerName',type='text')
+          .row
+            .form-group
+              .col-md-12
+                label Owner NID
+                input.form-control(ng-model="landreg.nid",name='nid',type='text')
+
+          
+          .row
+            .col-md-12
+              input.btn.btn-primary.pull-right.mb-xl(type='submit', ng-click='formSubmit(landreg)', value="Update Land Info")
+
+    a.btn.btn-info(href='#/admin', role='button') BACK

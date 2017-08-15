@@ -33,17 +33,28 @@ router.get('/admin', function(req, res, next) {
 });
 
 router.get('/find_land_page', function(req, res, next) {
-  console.log("lsdkjflsdjsdflajalfsjlfsdk");
   res.render('partials/find_land', { title: 'Find Land' });
+});
+
+router.get('/user_land_page', function(req, res, next) {
+  res.render('partials/user_land', { title: 'My Land List' });
 });
 
 router.get('/user_list_page', function(req, res, next) {
   res.render('partials/user_list', { title: 'User List' });
 });
 
+router.get("/land_update_page", function(req, res, next){
+  res.render("partials/update_land", { title : "Land Update"});
+});
+
 router.get('/register', function(req, res, next) {
   // console.log("flsjklskjsd");
   res.render('partials/register', { title: 'Register' });
+});
+
+router.get("/user_update_page", function(req, res, next){
+  res.render("partials/user_update", { title : "User Update"});
 });
   
  

@@ -1,0 +1,65 @@
+.container
+  .row
+    .col-md-12
+      .featured-boxes
+        .row
+          .col-md-3
+          .col-md-6
+            .featured-box.featured-box-primary.align-left.mt-xlg
+              .box-content
+                h4.heading-primary.text-uppercase.mb-md Update Account Information
+                form#frmSignUp()
+                  .row
+                    .form-group
+                      .col-md-12
+                        label Username
+                        input.form-control(ng-model="reg.username",name='name',type='text')
+                  .row
+                    .form-group
+                      .col-md-12
+                        label User Type
+                        select.form-control(ng-model="reg.userType", name='userType')
+                          option(value="", selected, disabled) Select User Type
+                          option(value="admin") Administrator
+                          option(value="general") General
+                  .row
+                    .form-group
+                      .col-md-12
+                        label E-mail Address
+                        input.form-control(ng-model="reg.email",name='email',type='text') 
+                  .row
+                    .form-group
+                      .col-md-12
+                        label Phone number
+                        input.form-control(ng-model="reg.phoneNumber",name='phone',type='text')
+
+                  .row
+                    .form-group
+                      .col-md-12
+                        label National ID number
+                        input.form-control(ng-model="reg.nid",name='nid',type='text')                 
+                  .row
+                    .form-group
+                      .col-md-6
+                        label Password
+                        input.form-control(ng-model="reg.password",name='password',type='password')
+                      .col-md-6
+                        label Re-enter Password
+                        input.form-control(ng-model="reg.password2",name='password',type='password')
+                    .alert.alert-warning(role="alert",ng-if="passMatch===false")
+                      button.close(type="button", data-dismiss="alert")
+                        span(aria-hidden="true") &times;
+                        span.sr-only Close
+                      strong PASSWORD DID NOT MATCH!  
+
+                    .row
+                    .form-group
+                      .col-md-12
+                        label Case details
+                        input.form-control(ng-model="reg.caseDetails",name='case',type='text')    
+
+
+                  .row
+                    .col-md-12
+                      input.btn.btn-primary.pull-right.mb-xl(type='submit', ng-click='updateInfo(reg)', value="Update User Info")
+          .col-md-3
