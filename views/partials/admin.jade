@@ -1,49 +1,50 @@
- 
 .main(role='main')
   section.page-header
-    .container      
-      .row
-        .col-md-12
-          ul.breadcrumb
-            li
-              a(href='#') Home
-            li.active Pages
+    .container.center      
+      
+              
       .row
         .col-md-12
           h1 Admin Panel
-    .container
+    .container.center
       .row
-        .col-md-3
-          aside.sidebar
-            h4.heading-primary Categories
-              ul.nav.nav-list.mb-xlg
-                li
-                  a(href='#/user_list') User List
-                li.active
-                  a(href='#/find_land') Land details
-                  
-                li
-                  a(href='#/land_registration') Land Registration
-                
-
-                li
-                  a(href='#/admin') Home
-                
-
-        //- .col-md-9
-        //-     .row
-        //-       .col-md-12
-        //-         section.panel.panel-admin
-        //-           header.panel-heading
-        //-             .panel-actions
-        //-               a.panel-action.panel-action-toggle(href='#', data-panel-toggle='')
-        //-               a.panel-action.panel-action-dismiss(href='#', data-panel-dismiss='')
-        //-             h2.panel-title Default
-        //-           .panel-body
-        //-             .row
-        //-               .col-sm-6
-        //-                 .mb-md
-        //-                   button#addToTable.btn.btn-primary
-        //-                     | Add 
-        //-                     i.fa.fa-plus
+        .col-md-12
+          aside#sidebar-center.sidebar
+            .sidebar-header
+              .sidebar-title
+                br
+            
+            .nano
+              .nano-content
+                nav#menu.nav-main(role='navigation')
+                  ul.nav.nav-main.center-box
+                    li
+                      a(href='#/user_list') User List
+                    li.active
+                      a(href='#/find_land') Land details
+                      
+                    li
+                      a(href='#/land_registration') Land Registration
                     
+
+                    li
+                      a(href='#/admin') Home
+                    
+
+            //- .col-md-9
+            //-     .row
+            //-       .col-md-12
+            //-         section.panel.panel-admin
+            //-           header.panel-heading
+            //-             .panel-actions
+            //-               a.panel-action.panel-action-toggle(href='#', data-panel-toggle='')
+            //-               a.panel-action.panel-action-dismiss(href='#', data-panel-dismiss='')
+            //-             h2.panel-title Default
+            //-           .panel-body
+            //-             .row
+            //-               .col-sm-6
+            //-                 .mb-md
+            //-                   button#addToTable.btn.btn-primary
+            //-                     | Add 
+            //-                     i.fa.fa-plus
+                        

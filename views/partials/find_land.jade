@@ -1,56 +1,56 @@
 .container
-	.row
-		.col-md-12
-			h1 Land List
-			table.table(border='5')
-				thead
-					col
-					tr
-						th(width="10%") Division
-						th District
-						
-						th Upazilla
-						th Thana
-						th Village
-						th LandType
-						th 
-						
-					tr
-						th
-							input(placeholder='Search...' ,size="10",type="text", ng-model="land.division", ng-keyup="getLandList(land)")
-						th
-							input(placeholder='Search...' ,size="10",type="text", ng-model="land.district", ng-keyup="getLandList(land)")
-						
-						th
-							input(placeholder='Search...' ,size="10",type="text", ng-model="land.upazilla", ng-keyup="getLandList(land)")
-						th
-							input(placeholder='Search...' ,size="10",type="text", ng-model="land.thana", ng-keyup="getLandList(land)")
-						th
-							input(placeholder='Search...' ,size="10",type="text", ng-model="land.village", ng-keyup="getLandList(land)")
-						th
-							input(placeholder='Search...' ,size="10",type="text", ng-model="land.landType", ng-keyup="getLandList(land)")
-						th
-							d(size="10",ng-model="land.landType", ng-keyup="getLandList(land)")
-						
-						
-				tbody
-					tr(ng-repeat = "land in landList")
-						td(ng-bind="land.division")
-						td(ng-bind="land.district")
-						
-						td(ng-bind="land.upazilla")
-						td(ng-bind="land.thana")
-						td(ng-bind="land.village")
-						td(ng-bind="land.landType")
+		.row
+			.col-md-12
+				h1 Land List
+				table.table(border='5')
+					thead
+						col
+						tr(style='color:white;')
+							th(width="10%") Division
+							th District
+							
+							th Upazilla
+							th Thana
+							th Village
+							th LandType
+							th 
+							
+						tr
+							th
+								input(placeholder='Search...' ,size="10",type="text", ng-model="land.division", ng-keyup="getLandList(land)")
+							th
+								input(placeholder='Search...' ,size="10",type="text", ng-model="land.district", ng-keyup="getLandList(land)")
+							
+							th
+								input(placeholder='Search...' ,size="10",type="text", ng-model="land.upazilla", ng-keyup="getLandList(land)")
+							th
+								input(placeholder='Search...' ,size="10",type="text", ng-model="land.thana", ng-keyup="getLandList(land)")
+							th
+								input(placeholder='Search...' ,size="10",type="text", ng-model="land.village", ng-keyup="getLandList(land)")
+							th
+								input(placeholder='Search...' ,size="10",type="text", ng-model="land.landType", ng-keyup="getLandList(land)")
+							th
+								d(size="10",ng-model="land.landType", ng-keyup="getLandList(land)")
+							
+							
+					tbody(style='color:white;')
+						tr(ng-repeat = "land in landList")
+							td(ng-bind="land.division")
+							td(ng-bind="land.district")
+							
+							td(ng-bind="land.upazilla")
+							td(ng-bind="land.thana")
+							td(ng-bind="land.village")
+							td(ng-bind="land.landType")
 
 
-						td 
-							td
-								a.btn-success(href="#/land_details/{{land._id}}") Details
-							td
-								a.btn-warning(href="#/land_update/{{land._id}}") Edit Info
-							td
-								button.btn-danger.pull-right.mb-xl(ng-click="landDelete(land._id)") Delete
+							td 
+								td
+									a.btn.btn-3d.btn-success.btn-sm(href="#/land_details/{{land._id}}") Details
+								td
+									a.btn.btn-3d.btn-warning.btn-sm(href="#/land_update/{{land._id}}") Edit Info
+								td
+									button.btn.btn-3d.btn-danger.btn-sm(ng-click="landDelete(land._id)") Delete
 
-	.row
-		a.btn.btn-info(href='#/admin', role='button') BACK
+		.row
+			a.btn.btn-3d.btn-secondary.mr-xs.mb-sm(href='#/admin', role='button') BACK

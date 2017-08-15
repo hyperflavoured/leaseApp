@@ -8,7 +8,7 @@
           .row
             .form-group
               .col-md-12
-                label Division
+                label(style='color:white;') Division 
                 select(ng-model="landreg.division")
                   option(value="") Select Division
                   option(value="dhaka") Dhaka
@@ -21,29 +21,29 @@
                   option(value="mymensingh") Mymensingh
                 //- input.form-control(ng-model="landreg.division",name='division',type='text')
           .row
-            .form-group
+            .form-group(style='color:white;')
               .col-md-12
-                label District
-                input.form-control(ng-model="landreg.district",name='district',type='text')
+                label(style='color:white;') District
+                input.form-control(style='color:white;')(ng-model="landreg.district",name='district',type='text')
           .row
             .form-group
               .col-md-12
-                label Upazilla
-                input.form-control(ng-model="landreg.upazilla",name='upazilla',type='text')
+                label(style='color:white;') Upazilla
+                input.form-control(style='color:white;')(ng-model="landreg.upazilla",name='upazilla',type='text')
           .row
             .form-group
               .col-md-12
-                label Thana
-                input.form-control(ng-model="landreg.thana",name='thana',type='text')
+                label(style='color:white;') Thana
+                input.form-control(style='color:white;')(ng-model="landreg.thana",name='thana',type='text')
           .row
             .form-group
               .col-md-12
-                label Village
-                input.form-control(ng-model="landreg.village",name='village',type='text')
+                label(style='color:white;') Village
+                input.form-control(style='color:white;')(ng-model="landreg.village",name='village',type='text')
           .row
             .form-group
               .col-md-12
-                label Land Type
+                label(style='color:white;') Land Type
                 select.selectpicker(ng-model="landreg.landType")
                   option(value="") Select Land Type
                   option(value="haatbazar") Haat Bazar
@@ -56,52 +56,52 @@
           .row
             .form-group
               .col-md-12
-                label Land Name
-                input.form-control(ng-model="landreg.landName",name='landName',type='text')
+                label(style='color:white;') Land Name
+                input.form-control(style='color:white;')(ng-model="landreg.landName",name='landName',type='text')
           .row
             .form-group
               .col-md-12
-                label Land Size
-                input.form-control(ng-model="landreg.landSize",name='landSize',type='text')
+                label(style='color:white;') Land Size
+                input.form-control(style='color:white;')(ng-model="landreg.landSize",name='landSize',type='text')
           .row
             .form-group
               .col-md-12
-                label Location
-                input.form-control(ng-model="landreg.location",name='location',type='text')
+                label(style='color:white;') Location
+                input.form-control(style='color:white;')(ng-model="landreg.location",name='location',type='text')
           .row
             .form-group
               .col-md-12
-                label Purchase Date
-                input.form-control(ng-model="landreg.purchaseDate",name='purchaseDate',type='date')
+                label(style='color:white;') Purchase Date
+                input.form-control(style='color:white;')(ng-model="landreg.purchaseDate",name='purchaseDate',type='date')
           .row
             .form-group
               .col-md-12
-                label Purchase Amount
-                input.form-control(ng-model="landreg.purchaseAmount",name='purchaseAmount',type='number')
+                label(style='color:white;') Purchase Amount
+                input.form-control(style='color:white;')(ng-model="landreg.purchaseAmount",name='purchaseAmount',type='number')
           .row
             .form-group
               .col-md-12
-                label Case Date
-                input.form-control(ng-model="landreg.caseDate",name='caseDate',type='date')
+                label(style='color:white;') Case Date
+                input.form-control(style='color:white;')(ng-model="landreg.caseDate",name='caseDate',type='date')
           .row
             .form-group
               .col-md-12
-                label Case Details
-                input.form-control(ng-model="landreg.caseDetails",name='caseDetails',type='text')
+                label(style='color:white;') Case Details
+                input.form-control(style='color:white;')(ng-model="landreg.caseDetails",name='caseDetails',type='text')
           .row
             .form-group
               .col-md-12
-                label Owner Name
-                input.form-control(ng-model="landreg.ownerName",name='ownerName',type='text')
+                label(style='color:white;') Owner Name
+                input.form-control(style='color:white;')(ng-model="landreg.ownerName",name='ownerName',type='text')
           .row
             .form-group
               .col-md-12
-                label Owner NID
-                input.form-control(ng-model="landreg.nid",name='nid',type='text')
+                label(style='color:white;') Owner NID
+                input.form-control(style='color:white;')(ng-model="landreg.nid",name='nid',type='text')
 
           
           .row
             .col-md-12
               input.btn.btn-primary.pull-right.mb-xl(type='submit', ng-click='formSubmit(landreg)', value="Register Land")
 
-    a.btn.btn-info(href='#/admin', role='button') BACK
+    a.btn.btn-3d.btn-quaternary.mr-xs.mb-sm.pull-right(href='#/admin', role='button') BACK

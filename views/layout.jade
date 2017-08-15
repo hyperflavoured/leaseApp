@@ -34,10 +34,17 @@ html.dark(lang='en',ng-app='App')
     link(rel='stylesheet', href='vendor/rs-plugin/css/navigation.css')
     // Skin CSS
     link(rel='stylesheet', href='css/skins/skin-corporate-4.css')
+    link(rel='stylesheet', href='css/skins/skin-digital-agency.css')
+
     // Theme Custom CSS
     link(rel='stylesheet', href='css/custom.css')
     // Head Libs
     script(src='vendor/modernizr/modernizr.min.js')
+    script(src='dist/sweetalert.min.js')
+    link(rel='stylesheet', type='text/css', href='dist/sweetalert.css')
+    
+      
+
   body
     .body
       header#header(data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyStartAt': 57, 'stickySetTop': '-57px', 'stickyChangeLogo': true}")
@@ -47,7 +54,7 @@ html.dark(lang='en',ng-app='App')
               .header-column
                 .header-logo
                   a(href='index.html')
-                    img(alt='', height='100',width='160',data-sticky-width='60', data-sticky-height='80', data-sticky-top='50', src='img/logo11.png')
+                    img(alt='', height='100',width='160',data-sticky-width='60', data-sticky-height='80', data-sticky-top='50', src='img/logo19.png')
               .header-column
                 
                   
@@ -67,7 +74,7 @@ html.dark(lang='en',ng-app='App')
                         ul#mainNav.nav.nav-pills
                           
                           li
-                            a.toggle(href='#/home')
+                            a(href='#/home')
                               | Home
                           //- li
                           //-   a.toggle(href='#/show_jolmohor')
@@ -79,7 +86,7 @@ html.dark(lang='en',ng-app='App')
                           //-   a.toggle(href='#/find_land')
                           //-     | Find Land
                           li
-                            a.toggle(href='#/contact_us')
+                            a(href='#/contact_us')
                               | Contact Us
                           //- li
                           //-   a.toggle(href='#/jolmohor_registration')
@@ -88,84 +95,52 @@ html.dark(lang='en',ng-app='App')
 
                               
                           li
-                            a.toggle(href='#/about_us')
+                            a(href='#/about_us')
                               | About Us 
-                          li(ng-if="userInfo.userType === 'admin'")
-                            a.toggle(href='#/register')
-                              | Register        
+                          //- li(ng-if="userInfo.userType === 'admin'")
+                          //-   a(href='#/register')
+                          //-     | Register        
                           //- li
                           //-   a.toggle(href='#/user_list')
                           //-     | User List
-                          li(ng-if="userInfo && userInfo.userType!='admin'")
-                            a.toggle(href='#/user_land/{{userInfo.nid}}')
-                              | My Lands
-                          li(ng-if="userInfo")
-                            a.toggle(href='#/user_update/{{userInfo._id}}')
-                              | My Account
+                          //- li(ng-if="userInfo")
+                          //-   a(href='#/user_update/{{userInfo._id}}')
+                          //-     | My Account
                           li(ng-if="userInfo.userType === 'admin'")
-                            a.toggle(href='#/admin')
+                            a(href='#/admin')
                               | Admin Panel
                           li(ng-if="loggedIn !== 'true'")
-                            a.toggle(href='#/login')
+                            a(href='#/login')
                               | Log in
-                          li(ng-if="loggedIn === 'true'")
-                            a.btn.toggle(ng-click="logOut()") Log Out
-                          li(ng-if="userInfo")
-                            h2 Hello {{userInfo.username}}
+                          li.dropdown(ng-if="userInfo")
+                                a.dropdown-toggle(href='#')
+                                  | 
+                                  {{userInfo.username}}
+                                
+                                
+                                ul.dropdown-menu
+                                  li(ng-if="userInfo")
+                                    a(href='#/user_update/{{userInfo._id}}')
+                                      | My Account  
+                          
+                                  li(ng-if="userInfo && userInfo.userType!='admin'")
+                                    a(href='#/user_land/{{userInfo.nid}}')
+                                      | My Lands
+                            
+                                  
+                                  li(ng-if="userInfo.userType === 'admin'")
+                                    a(href='#/register')
+                                      | Register 
+                                  li(ng-if="loggedIn === 'true'")
+                                    a.btn.pull-left(ng-click="logOut()") Log Out
                           //- li
                           //-   a.toggle(href='#/user_list')
                           //-     | Admin panel
-      resovle-loader
       block content
 
       footer#footer
-        .container
-          
-            .col-md-3
-              .newsletter
-                h4 Newsletter
-                p
-                  | Keep up on our always evolving product features and technology. Enter your e-mail and subscribe to our newsletter.
-                #newsletterSuccess.alert.alert-success.hidden
-                  strong Success!
-                  |  You've been added to our email list.
-                #newsletterError.alert.alert-danger.hidden
-                form#newsletterForm(action='php/newsletter-subscribe.php', method='POST')
-                  .input-group
-                    input#newsletterEmail.form-control(placeholder='Email Address', name='newsletterEmail', type='text')
-                    span.input-group-btn
-                      button.btn.btn-default(type='submit') Go!
-            .col-md-3
-              h4 For Latest News              
-              p
-                | Stay conected with us.....
-            .col-md-4
-              .contact-details
-                h4 Contact Us
-                ul.contact
-                  li
-                    p
-                      i.fa.fa-map-marker
-                      strong Address:
-                      |  1234 Street Name, City Name, Bangladesh
-                  li
-                    p
-                      i.fa.fa-phone
-                      strong Phone:
-                      |  (123) 456-789
-                  li
-                    p
-                      i.fa.fa-envelope
-                      strong Email:
-                      a(href='mailto:mail@example.com') mail@example.com
-            .col-md-2
-              h4 Follow Us
-              ul.social-icons
-                li.social-icons-facebook
-                  a(href='http://www.facebook.com/', target='_blank', title='Facebook')
-                    i.fa.fa-facebook
                 
-        .footer-copyright
+        
           .container
             .row
               .col-md-1

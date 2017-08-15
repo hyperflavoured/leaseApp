@@ -9,31 +9,30 @@
     .container
       .row
         .col-md-3
-          aside.sidebar
-            h4.heading-primary Categories
-              ul.nav.nav-list.mb-xlg
-                li
-                  a(href='#/user_list') User List
-                li.active
-                  a(href='#/find_land') Land details
-                  
-                li
-                  a(href='#/land_registration') Land Registration
-                
+          aside#sidebar-center.sidebar
+            .sidebar-header
+              .sidebar-title
+                br
+            
+            .nano
+              .nano-content
+                nav#menu.nav-main(role='navigation')
+                  ul.nav.nav-main.center-box
+                    li
+                      a(href='#/user_list') User List
+                    li.active
+                      a(href='#/find_land') Land details
+                      
+                    li
+                      a(href='#/land_registration') Land Registration
+                    
 
-                li
-                  a(href='#/admin') Home
-                
+                    li
+                      a(href='#/admin') Home
                 
 
         .col-md-9
-            //- .row
-            //-   .col-md-6
-            //-     th
-            //-                 input(size="10",type="text", ng-model="user.phoneNumber", ng-keyup="getUserList(user)")
-            //-   .col-md-6
-            //-     th
-            //-                 input(size="10",type="text", ng-model="user.nid", ng-keyup="getUserList(user)")
+           
                      
 
             .row
@@ -43,7 +42,7 @@
                       thead
                         
 
-                        tr
+                        tr(style='color:white;')
                           th Username
                           th Email
                           th Contact Number
@@ -58,7 +57,7 @@
                           th
                             input(size="10",type="text", ng-model="user.nid", ng-keyup="getUserList(user)")
                             
-                      tbody
+                      tbody(style='color:white;')
                         tr(ng-repeat = "user in userList")
                           td(ng-bind="user.username")
                           td(ng-bind="user.email")
@@ -69,6 +68,6 @@
 
                           td 
                               td
-                                button.btn-danger.pull-right.mb-xl(ng-click="userDelete(user._id)") Delete
+                                a.btn.btn-3d.btn-warning.btn-sm(href="#/user_update/{{user._id}}") Edit Info
                               td
-                                a.btn-warning.pull-right.mb-xl(href="#/user_update/{{user._id}}") Edit Info
+                                button.btn.btn-3d.btn-danger.btn-sm(font-size: 10px;)(ng-click="userDelete(user._id)") Delete
