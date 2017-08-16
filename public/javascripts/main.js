@@ -37,6 +37,18 @@
 		/*=====  End of Whitelist  ======*/
 
 		$routeProvider
+		.when('/', {
+			templateUrl: serverRequestAddr.devServerAdd + '/home', // sends request to server for html page
+			controller: 'homeCtrl',
+			resolve: {
+				loadAsset: ['$ocLazyLoad', function($ocLazyLoad) {
+					return $ocLazyLoad.load({
+						files : [
+						serverRequestAddr.devServerAdd + '/javascripts/controllers/homeCtrl.js',
+						]})
+				}]
+			}
+		})
 		.when('/home', {
 			templateUrl: serverRequestAddr.devServerAdd + '/home', // sends request to server for html page
 			controller: 'homeCtrl',
